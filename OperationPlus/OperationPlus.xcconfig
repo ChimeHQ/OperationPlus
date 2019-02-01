@@ -1,0 +1,19 @@
+//
+//  Config.xcconfig
+//  OperationPlus
+//
+//  Created by Matt Massicotte on 2019-01-31.
+//  Copyright © 2019 Chime Systems Inc. All rights reserved.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+PRODUCT_NAME = OperationPlus
+PRODUCT_BUNDLE_IDENTIFIER = com.chimehq.OperationPlus
+PRODUCT_MODULE_NAME = OperationPlus
+INFOPLIST_FILE = OperationPlus/Info.plist
+MACOSX_DEPLOYMENT_TARGET = 10.10
+IPHONEOS_DEPLOYMENT_TARGET = 8.0
+TVOS_DEPLOYMENT_TARGET = 10.0
+WATCHOS_DEPLOYMENT_TARGET = 3.0
