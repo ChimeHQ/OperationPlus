@@ -1,0 +1,11 @@
+language: swift
+os: osx
+osx_image: xcode10.1
+xcode_project: OperationPlus.xcodeproj
+matrix:
+  include:
+    - env: TEST_SCHEME="OperationPlus-macOS" TEST_DESTINATION="platform=macOS"
+    - env: TEST_SCHEME="OperationPlus-iOS" TEST_DESTINATION="platform=iOS Simulator,name=iPhone 8"
+    - env: TEST_SCHEME="OperationPlus-tvOS" TEST_DESTINATION="platform=tvOS Simulator,name=Apple TV"
+script:
+  - xcodebuild test -scheme $TEST_SCHEME -destination "$TEST_DESTINATION"
