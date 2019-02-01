@@ -26,17 +26,95 @@ This is a simple `NSOperation` subclass built for easier extensibility. It featu
  - Easier cancellation handling
  - Stricter state checking
 
+```
+    let a = BaseOperation(timeout: 5.0)
+    
+    // NSOperation will happily allow you do this even
+    // if `a` has finished. `BaseOperation` will not.
+    a.addDependency(another)
+    
+    // ...
+    public override func main() {
+        // This will return true if your operation is cancelled, timed out,
+        // or prematurely finished. ResultOperation subclass state will be
+        // handled correctly as well.
+        if self.checkForCancellation() {
+            return
+        }
+    }
+    // ...
+```
+
 **AsyncOperation**
 
-A `BaseOperation` subclass that can be used for your asynchronous operations. These are any operations that need to extend their lifetime past the `main` method.
+A `BaseOperation` subclass that can be used for your synchronous operations. These are any operations that need to extend their lifetime past the `main` method.
+
+```
+    import 'Foundation'
+    import 'OperationPlus'
+
+    class MyAsyncOperation: AsyncOperation {
+        public override func main() {
+            DispatchQueue.global().async {
+                if self.checkForCancellation() {
+                    return
+                }
+
+                // do stuff
+
+                self.finish()
+            }
+        }
+    }
+```
 
 **ResultOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
 
+```
+    import 'Foundation'
+    import 'OperationPlus'
+
+    class MyValueOperation: ResultOperation<Int> {
+        public override func main() {
+            // do your computation
+            
+            finish(with: 42)
+        }
+    }
+    
+    // ...
+    
+    let op = MyValueOperation()
+    
+    op.resultCompletionBlock = { (value) in
+        // use value here
+    }
+```
+
 **AsyncResultOperation**
 
 A variant of `ResultOperation` that may produce a result value after the `main` method has completed executing.
+
+```
+    import 'Foundation'
+    import 'OperationPlus'
+
+    class MyAsyncOperation: AsyncResultOperation<Int> {
+        public override func main() {
+            DispatchQueue.global().async {
+                if self.checkForCancellation() {
+                    return
+                }
+
+                // do stuff
+
+                self.finish(with: 42)
+            }
+        }
+    }
+```
 
 **AsyncBlockOperation**
 
