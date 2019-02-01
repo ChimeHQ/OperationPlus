@@ -79,7 +79,7 @@ Queueing work when a queue's current operations are complete:
 
 ### XCTest Support
 
-**OperationTestingPlus** is an optional micro-framework to help make your XCTest-based tests a little nicer.
+**OperationTestingPlus** is an optional micro-framework to help make your XCTest-based tests a little nicer. When using Carthage, it is built as a static framework to help ease integration with your testing targets.
 
 **FulfillExpectationOperation**
 
