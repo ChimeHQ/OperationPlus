@@ -5,7 +5,7 @@
 
 OperationPlus is a small set of NSOperation subclasses and extensions on NSOperation/NSOperationQueue. Its goal is to fill in NSOperation API's missing pieces. You don't need to learn anything new to use it.
 
-There are a bunch of alternatives to the NSOperation model, like reactive programming. But, if you want to stick close to APIs Apple is currently shipping, NSOperation is a very natural fit. But, once you start building real applications against it, you'll realize that the API is missing some important parts. OperationPlus tries to fill those in.
+There are a bunch of alternatives to the NSOperation model, like reactive programming. But, since Apple ships NSOperation, it gets used a lot. Once you start building real applications against it, you might find that the API is missing some important parts. OperationPlus tries to fill those in.
 
 ## Installation
 
