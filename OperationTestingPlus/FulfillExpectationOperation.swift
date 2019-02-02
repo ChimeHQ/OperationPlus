@@ -8,9 +8,14 @@
 
 import XCTest
 
+/// This Operation subclass will fulfill an `XCTestExpectation` when it
+/// completes.
 public class FulfillExpectationOperation: Operation {
     private let expectation: XCTestExpectation
 
+    /// Initializer
+    ///
+    /// - Parameter expectation: will call `fulfill` on this instance when run
     public init(expectation: XCTestExpectation) {
         self.expectation = expectation
     }

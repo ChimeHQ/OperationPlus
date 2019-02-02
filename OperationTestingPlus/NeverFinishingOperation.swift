@@ -9,6 +9,10 @@
 import Foundation
 import OperationPlus
 
+/// A simple `Operation` that will never complete. Useful for testing
+/// timeout behavior of other systems.
+///
+/// Warning: This operation will completely block a serial queue forever
 public class NeverFinishingOperation: BaseOperation {
     public override func main() {
     }
