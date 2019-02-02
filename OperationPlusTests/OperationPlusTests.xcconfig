@@ -9,10 +9,14 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
+#include "xcconfigs/UniversalFramework_Test.xcconfig"
+
 PRODUCT_NAME = OperationPlusTests
 PRODUCT_BUNDLE_IDENTIFIER = com.chimehq.OperationPlusTests
 PRODUCT_MODULE_NAME = OperationPlusTests
+
 INFOPLIST_FILE = OperationPlusTests/Info.plist
+
 MACOSX_DEPLOYMENT_TARGET = 10.10
 IPHONEOS_DEPLOYMENT_TARGET = 8.0
 TVOS_DEPLOYMENT_TARGET = 10.0

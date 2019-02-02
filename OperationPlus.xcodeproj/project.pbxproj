@@ -14,12 +14,6 @@
 		C9B021502203D064006A1D9F /* ResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ResultOperation.swift */; };
 		C9B021522203D086006A1D9F /* AsyncResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncResultOperation.swift */; };
 		C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */; };
-		C9B021632203D12B006A1D9F /* OperationPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B0215A2203D12A006A1D9F /* OperationPlus.framework */; };
-		C9B021712203D15D006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
-		C9B021722203D160006A1D9F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */; };
-		C9B021732203D163006A1D9F /* ResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ResultOperation.swift */; };
-		C9B021742203D166006A1D9F /* AsyncResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncResultOperation.swift */; };
-		C9B021752203D168006A1D9F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */; };
 		C9B021802203D2F3006A1D9F /* OperationTestingPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0217E2203D2F3006A1D9F /* OperationTestingPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B021882203D3A2006A1D9F /* OperationExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021852203D3A1006A1D9F /* OperationExpectation.swift */; };
 		C9B021892203D3A2006A1D9F /* FulfillExpectationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021862203D3A2006A1D9F /* FulfillExpectationOperation.swift */; };
@@ -27,52 +21,10 @@
 		C9B0218F2203D556006A1D9F /* OperationQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */; };
 		C9B021902203D556006A1D9F /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218E2203D556006A1D9F /* BaseOperationTests.swift */; };
 		C9B021992203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021942203D6AA006A1D9F /* OperationQueue+Emptied.swift */; };
-		C9B0219A2203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021942203D6AA006A1D9F /* OperationQueue+Emptied.swift */; };
 		C9B0219B2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021952203D6AA006A1D9F /* OperationQueue+Preconditions.swift */; };
-		C9B0219C2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021952203D6AA006A1D9F /* OperationQueue+Preconditions.swift */; };
 		C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
-		C9B0219E2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
 		C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
-		C9B021A02203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
 		C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
-		C9B021A22203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
-		C9B021A32203DC79006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B021B12203DDB7006A1D9F /* OperationTestingPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0217E2203D2F3006A1D9F /* OperationTestingPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B021B22203DDBE006A1D9F /* FulfillExpectationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021862203D3A2006A1D9F /* FulfillExpectationOperation.swift */; };
-		C9B021B32203DDC1006A1D9F /* NeverFinishingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021872203D3A2006A1D9F /* NeverFinishingOperation.swift */; };
-		C9B021B42203DDC4006A1D9F /* OperationExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021852203D3A1006A1D9F /* OperationExpectation.swift */; };
-		C9B021B72203DE63006A1D9F /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218E2203D556006A1D9F /* BaseOperationTests.swift */; };
-		C9B021B82203DE66006A1D9F /* OperationQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */; };
-		C9B021C822047CC2006A1D9F /* OperationPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B021BF22047CC1006A1D9F /* OperationPlus.framework */; };
-		C9B021D622047D99006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
-		C9B021D722047D99006A1D9F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */; };
-		C9B021D822047D99006A1D9F /* ResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ResultOperation.swift */; };
-		C9B021D922047D99006A1D9F /* AsyncResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncResultOperation.swift */; };
-		C9B021DA22047D99006A1D9F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */; };
-		C9B021DB22047DE6006A1D9F /* BaseOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218E2203D556006A1D9F /* BaseOperationTests.swift */; };
-		C9B021DC22047DE6006A1D9F /* OperationQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */; };
-		C9B021FB22049A29006A1D9F /* OperationTestingPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0217E2203D2F3006A1D9F /* OperationTestingPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B021FC22049A30006A1D9F /* FulfillExpectationOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021862203D3A2006A1D9F /* FulfillExpectationOperation.swift */; };
-		C9B021FD22049A30006A1D9F /* NeverFinishingOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021872203D3A2006A1D9F /* NeverFinishingOperation.swift */; };
-		C9B021FE22049A30006A1D9F /* OperationExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021852203D3A1006A1D9F /* OperationExpectation.swift */; };
-		C9B021FF22049A30006A1D9F /* OperationTestingPlus.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */; };
-		C9B0220422049AD0006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
-		C9B0220522049AD0006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
-		C9B0220622049AD0006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
-		C9B0220722049AD0006A1D9F /* OperationQueue+Emptied.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021942203D6AA006A1D9F /* OperationQueue+Emptied.swift */; };
-		C9B0220822049AD0006A1D9F /* OperationQueue+Preconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021952203D6AA006A1D9F /* OperationQueue+Preconditions.swift */; };
-		C9B0222322049CAA006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B0222422049CAE006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C9B0222522049CBE006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
-		C9B0222622049CBE006A1D9F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */; };
-		C9B0222722049CBE006A1D9F /* ResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ResultOperation.swift */; };
-		C9B0222822049CBE006A1D9F /* AsyncResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncResultOperation.swift */; };
-		C9B0222922049CBE006A1D9F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */; };
-		C9B0222A22049CBE006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
-		C9B0222B22049CBE006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
-		C9B0222C22049CBE006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
-		C9B0222D22049CBE006A1D9F /* OperationQueue+Emptied.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021942203D6AA006A1D9F /* OperationQueue+Emptied.swift */; };
-		C9B0222E22049CBE006A1D9F /* OperationQueue+Preconditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021952203D6AA006A1D9F /* OperationQueue+Preconditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,13 +34,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = C9B021302203CE91006A1D9F;
 			remoteInfo = OperationPlus;
-		};
-		C9B021642203D12B006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021592203D12A006A1D9F;
-			remoteInfo = "OperationPlus-iOS";
 		};
 		C9B0218B2203D472006A1D9F /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -104,41 +49,6 @@
 			remoteGlobalIDString = C9B0217B2203D2F3006A1D9F;
 			remoteInfo = OperationTestingPlus;
 		};
-		C9B021B52203DE4B006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021592203D12A006A1D9F;
-			remoteInfo = "OperationPlus-iOS";
-		};
-		C9B021C922047CC2006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021BE22047CC1006A1D9F;
-			remoteInfo = "OperationPlus-tvOS";
-		};
-		C9B021F922049A17006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021BE22047CC1006A1D9F;
-			remoteInfo = "OperationPlus-tvOS";
-		};
-		C9B0220022049A4A006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021A82203DD34006A1D9F;
-			remoteInfo = "OperationTestingPlus-iOS";
-		};
-		C9B0220222049A54006A1D9F /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C9B021282203CE91006A1D9F /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C9B021E122049979006A1D9F;
-			remoteInfo = "OperationTestingPlus-tvOS";
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -152,8 +62,6 @@
 		C9B0214F2203D064006A1D9F /* ResultOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperation.swift; sourceTree = "<group>"; };
 		C9B021512203D086006A1D9F /* AsyncResultOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncResultOperation.swift; sourceTree = "<group>"; };
 		C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
-		C9B0215A2203D12A006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9B021622203D12B006A1D9F /* OperationPlus-iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "OperationPlus-iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlus.xcconfig; sourceTree = "<group>"; };
 		C9B0217C2203D2F3006A1D9F /* OperationTestingPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationTestingPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B0217E2203D2F3006A1D9F /* OperationTestingPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationTestingPlus.h; sourceTree = "<group>"; };
@@ -169,12 +77,8 @@
 		C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Dependencies.swift"; sourceTree = "<group>"; };
 		C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Operation+Dependencies.swift"; sourceTree = "<group>"; };
 		C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Creation.swift"; sourceTree = "<group>"; };
-		C9B021A92203DD34006A1D9F /* OperationTestingPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationTestingPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlusTests.xcconfig; sourceTree = "<group>"; };
-		C9B021BF22047CC1006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9B021C722047CC2006A1D9F /* OperationPlusTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OperationPlusTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9B021E222049979006A1D9F /* OperationTestingPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationTestingPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9B0221B22049C3E006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9B022A62205287F006A1D9F /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,58 +97,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B021572203D12A006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0215F2203D12B006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021632203D12B006A1D9F /* OperationPlus.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9B021792203D2F3006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021A62203DD34006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021BC22047CC1006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021C422047CC2006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021C822047CC2006A1D9F /* OperationPlus.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021DF22049979006A1D9F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0221822049C3E006A1D9F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -269,14 +122,7 @@
 			children = (
 				C9B021312203CE91006A1D9F /* OperationPlus.framework */,
 				C9B0213A2203CE91006A1D9F /* OperationPlusTests.xctest */,
-				C9B0215A2203D12A006A1D9F /* OperationPlus.framework */,
-				C9B021622203D12B006A1D9F /* OperationPlus-iOSTests.xctest */,
 				C9B0217C2203D2F3006A1D9F /* OperationTestingPlus.framework */,
-				C9B021A92203DD34006A1D9F /* OperationTestingPlus.framework */,
-				C9B021BF22047CC1006A1D9F /* OperationPlus.framework */,
-				C9B021C722047CC2006A1D9F /* OperationPlusTests.xctest */,
-				C9B021E222049979006A1D9F /* OperationTestingPlus.framework */,
-				C9B0221B22049C3E006A1D9F /* OperationPlus.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -284,6 +130,7 @@
 		C9B021332203CE91006A1D9F /* OperationPlus */ = {
 			isa = PBXGroup;
 			children = (
+				C9B022A62205287F006A1D9F /* xcconfigs */,
 				C9B021342203CE91006A1D9F /* OperationPlus.h */,
 				C9B021352203CE91006A1D9F /* Info.plist */,
 				C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */,
@@ -344,51 +191,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B021552203D12A006A1D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021A32203DC79006A1D9F /* OperationPlus.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9B021772203D2F3006A1D9F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				C9B021802203D2F3006A1D9F /* OperationTestingPlus.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021A42203DD34006A1D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021B12203DDB7006A1D9F /* OperationTestingPlus.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021BA22047CC1006A1D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B0222322049CAA006A1D9F /* OperationPlus.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021DD22049979006A1D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021FB22049A29006A1D9F /* OperationTestingPlus.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0221622049C3E006A1D9F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B0222422049CAE006A1D9F /* OperationPlus.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,43 +239,6 @@
 			productReference = C9B0213A2203CE91006A1D9F /* OperationPlusTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		C9B021592203D12A006A1D9F /* OperationPlus-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B0216B2203D12B006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-iOS" */;
-			buildPhases = (
-				C9B021552203D12A006A1D9F /* Headers */,
-				C9B021562203D12A006A1D9F /* Sources */,
-				C9B021572203D12A006A1D9F /* Frameworks */,
-				C9B021582203D12A006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OperationPlus-iOS";
-			productName = "OperationPlus-iOS";
-			productReference = C9B0215A2203D12A006A1D9F /* OperationPlus.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C9B021612203D12B006A1D9F /* OperationPlus-iOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B0216E2203D12B006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-iOSTests" */;
-			buildPhases = (
-				C9B0215E2203D12B006A1D9F /* Sources */,
-				C9B0215F2203D12B006A1D9F /* Frameworks */,
-				C9B021602203D12B006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9B0220122049A4A006A1D9F /* PBXTargetDependency */,
-				C9B021652203D12B006A1D9F /* PBXTargetDependency */,
-			);
-			name = "OperationPlus-iOSTests";
-			productName = "OperationPlus-iOSTests";
-			productReference = C9B021622203D12B006A1D9F /* OperationPlus-iOSTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
 		C9B0217B2203D2F3006A1D9F /* OperationTestingPlus */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9B021812203D2F3006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus" */;
@@ -488,99 +258,6 @@
 			productReference = C9B0217C2203D2F3006A1D9F /* OperationTestingPlus.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		C9B021A82203DD34006A1D9F /* OperationTestingPlus-iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B021AE2203DD34006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus-iOS" */;
-			buildPhases = (
-				C9B021A42203DD34006A1D9F /* Headers */,
-				C9B021A52203DD34006A1D9F /* Sources */,
-				C9B021A62203DD34006A1D9F /* Frameworks */,
-				C9B021A72203DD34006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9B021B62203DE4B006A1D9F /* PBXTargetDependency */,
-			);
-			name = "OperationTestingPlus-iOS";
-			productName = "OperationTestingPlus-iOS";
-			productReference = C9B021A92203DD34006A1D9F /* OperationTestingPlus.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C9B021BE22047CC1006A1D9F /* OperationPlus-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B021D022047CC2006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-tvOS" */;
-			buildPhases = (
-				C9B021BA22047CC1006A1D9F /* Headers */,
-				C9B021BB22047CC1006A1D9F /* Sources */,
-				C9B021BC22047CC1006A1D9F /* Frameworks */,
-				C9B021BD22047CC1006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OperationPlus-tvOS";
-			productName = "OperationPlus-tvOS";
-			productReference = C9B021BF22047CC1006A1D9F /* OperationPlus.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C9B021C622047CC2006A1D9F /* OperationPlus-tvOSTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B021D322047CC2006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-tvOSTests" */;
-			buildPhases = (
-				C9B021C322047CC2006A1D9F /* Sources */,
-				C9B021C422047CC2006A1D9F /* Frameworks */,
-				C9B021C522047CC2006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9B0220322049A54006A1D9F /* PBXTargetDependency */,
-				C9B021CA22047CC2006A1D9F /* PBXTargetDependency */,
-			);
-			name = "OperationPlus-tvOSTests";
-			productName = "OperationPlus-tvOSTests";
-			productReference = C9B021C722047CC2006A1D9F /* OperationPlusTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		C9B021E122049979006A1D9F /* OperationTestingPlus-tvOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B021F322049979006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus-tvOS" */;
-			buildPhases = (
-				C9B021DD22049979006A1D9F /* Headers */,
-				C9B021DE22049979006A1D9F /* Sources */,
-				C9B021DF22049979006A1D9F /* Frameworks */,
-				C9B021E022049979006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				C9B021FA22049A17006A1D9F /* PBXTargetDependency */,
-			);
-			name = "OperationTestingPlus-tvOS";
-			productName = "OperationTestingPlus-tvOS";
-			productReference = C9B021E222049979006A1D9F /* OperationTestingPlus.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		C9B0221A22049C3E006A1D9F /* OperationPlus-watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C9B0222022049C3E006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-watchOS" */;
-			buildPhases = (
-				C9B0221622049C3E006A1D9F /* Headers */,
-				C9B0221722049C3E006A1D9F /* Sources */,
-				C9B0221822049C3E006A1D9F /* Frameworks */,
-				C9B0221922049C3E006A1D9F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "OperationPlus-watchOS";
-			productName = "OperationPlus-watchOS";
-			productReference = C9B0221B22049C3E006A1D9F /* OperationPlus.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -598,30 +275,9 @@
 					C9B021392203CE91006A1D9F = {
 						CreatedOnToolsVersion = 10.1;
 					};
-					C9B021592203D12A006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					C9B021612203D12B006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
 					C9B0217B2203D2F3006A1D9F = {
 						CreatedOnToolsVersion = 10.1;
 						LastSwiftMigration = 1010;
-					};
-					C9B021A82203DD34006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					C9B021BE22047CC1006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					C9B021C622047CC2006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					C9B021E122049979006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
-					};
-					C9B0221A22049C3E006A1D9F = {
-						CreatedOnToolsVersion = 10.1;
 					};
 				};
 			};
@@ -638,15 +294,8 @@
 			projectRoot = "";
 			targets = (
 				C9B021302203CE91006A1D9F /* OperationPlus */,
-				C9B021392203CE91006A1D9F /* OperationPlusTests */,
-				C9B021592203D12A006A1D9F /* OperationPlus-iOS */,
-				C9B021612203D12B006A1D9F /* OperationPlus-iOSTests */,
 				C9B0217B2203D2F3006A1D9F /* OperationTestingPlus */,
-				C9B021A82203DD34006A1D9F /* OperationTestingPlus-iOS */,
-				C9B021BE22047CC1006A1D9F /* OperationPlus-tvOS */,
-				C9B021C622047CC2006A1D9F /* OperationPlus-tvOSTests */,
-				C9B021E122049979006A1D9F /* OperationTestingPlus-tvOS */,
-				C9B0221A22049C3E006A1D9F /* OperationPlus-watchOS */,
+				C9B021392203CE91006A1D9F /* OperationPlusTests */,
 			);
 		};
 /* End PBXProject section */
@@ -666,57 +315,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B021582203D12A006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021602203D12B006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9B0217A2203D2F3006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021A72203DD34006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021BD22047CC1006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021C522047CC2006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021E022049979006A1D9F /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021FF22049A30006A1D9F /* OperationTestingPlus.xcconfig in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0221922049C3E006A1D9F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -752,32 +351,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C9B021562203D12A006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021A22203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */,
-				C9B0219A2203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */,
-				C9B0219C2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
-				C9B021752203D168006A1D9F /* AsyncBlockOperation.swift in Sources */,
-				C9B021722203D160006A1D9F /* AsyncOperation.swift in Sources */,
-				C9B0219E2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
-				C9B021732203D163006A1D9F /* ResultOperation.swift in Sources */,
-				C9B021712203D15D006A1D9F /* BaseOperation.swift in Sources */,
-				C9B021742203D166006A1D9F /* AsyncResultOperation.swift in Sources */,
-				C9B021A02203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0215E2203D12B006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021B72203DE63006A1D9F /* BaseOperationTests.swift in Sources */,
-				C9B021B82203DE66006A1D9F /* OperationQueueTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		C9B021782203D2F3006A1D9F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -785,69 +358,6 @@
 				C9B021882203D3A2006A1D9F /* OperationExpectation.swift in Sources */,
 				C9B0218A2203D3A2006A1D9F /* NeverFinishingOperation.swift in Sources */,
 				C9B021892203D3A2006A1D9F /* FulfillExpectationOperation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021A52203DD34006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021B42203DDC4006A1D9F /* OperationExpectation.swift in Sources */,
-				C9B021B32203DDC1006A1D9F /* NeverFinishingOperation.swift in Sources */,
-				C9B021B22203DDBE006A1D9F /* FulfillExpectationOperation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021BB22047CC1006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021DA22047D99006A1D9F /* AsyncBlockOperation.swift in Sources */,
-				C9B021D722047D99006A1D9F /* AsyncOperation.swift in Sources */,
-				C9B0220422049AD0006A1D9F /* Operation+Dependencies.swift in Sources */,
-				C9B0220522049AD0006A1D9F /* OperationQueue+Creation.swift in Sources */,
-				C9B0220622049AD0006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
-				C9B021D822047D99006A1D9F /* ResultOperation.swift in Sources */,
-				C9B0220722049AD0006A1D9F /* OperationQueue+Emptied.swift in Sources */,
-				C9B021D622047D99006A1D9F /* BaseOperation.swift in Sources */,
-				C9B021D922047D99006A1D9F /* AsyncResultOperation.swift in Sources */,
-				C9B0220822049AD0006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021C322047CC2006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021DB22047DE6006A1D9F /* BaseOperationTests.swift in Sources */,
-				C9B021DC22047DE6006A1D9F /* OperationQueueTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B021DE22049979006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B021FE22049A30006A1D9F /* OperationExpectation.swift in Sources */,
-				C9B021FD22049A30006A1D9F /* NeverFinishingOperation.swift in Sources */,
-				C9B021FC22049A30006A1D9F /* FulfillExpectationOperation.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C9B0221722049C3E006A1D9F /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C9B0222922049CBE006A1D9F /* AsyncBlockOperation.swift in Sources */,
-				C9B0222622049CBE006A1D9F /* AsyncOperation.swift in Sources */,
-				C9B0222A22049CBE006A1D9F /* Operation+Dependencies.swift in Sources */,
-				C9B0222B22049CBE006A1D9F /* OperationQueue+Creation.swift in Sources */,
-				C9B0222C22049CBE006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
-				C9B0222722049CBE006A1D9F /* ResultOperation.swift in Sources */,
-				C9B0222D22049CBE006A1D9F /* OperationQueue+Emptied.swift in Sources */,
-				C9B0222522049CBE006A1D9F /* BaseOperation.swift in Sources */,
-				C9B0222822049CBE006A1D9F /* AsyncResultOperation.swift in Sources */,
-				C9B0222E22049CBE006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -859,11 +369,6 @@
 			target = C9B021302203CE91006A1D9F /* OperationPlus */;
 			targetProxy = C9B0213C2203CE91006A1D9F /* PBXContainerItemProxy */;
 		};
-		C9B021652203D12B006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021592203D12A006A1D9F /* OperationPlus-iOS */;
-			targetProxy = C9B021642203D12B006A1D9F /* PBXContainerItemProxy */;
-		};
 		C9B0218C2203D472006A1D9F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = C9B021302203CE91006A1D9F /* OperationPlus */;
@@ -873,31 +378,6 @@
 			isa = PBXTargetDependency;
 			target = C9B0217B2203D2F3006A1D9F /* OperationTestingPlus */;
 			targetProxy = C9B021912203D5F4006A1D9F /* PBXContainerItemProxy */;
-		};
-		C9B021B62203DE4B006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021592203D12A006A1D9F /* OperationPlus-iOS */;
-			targetProxy = C9B021B52203DE4B006A1D9F /* PBXContainerItemProxy */;
-		};
-		C9B021CA22047CC2006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021BE22047CC1006A1D9F /* OperationPlus-tvOS */;
-			targetProxy = C9B021C922047CC2006A1D9F /* PBXContainerItemProxy */;
-		};
-		C9B021FA22049A17006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021BE22047CC1006A1D9F /* OperationPlus-tvOS */;
-			targetProxy = C9B021F922049A17006A1D9F /* PBXContainerItemProxy */;
-		};
-		C9B0220122049A4A006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021A82203DD34006A1D9F /* OperationTestingPlus-iOS */;
-			targetProxy = C9B0220022049A4A006A1D9F /* PBXContainerItemProxy */;
-		};
-		C9B0220322049A54006A1D9F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C9B021E122049979006A1D9F /* OperationTestingPlus-tvOS */;
-			targetProxy = C9B0220222049A54006A1D9F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1106,98 +586,6 @@
 			};
 			name = Release;
 		};
-		C9B0216C2203D12B006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C9B0216D2203D12B006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C9B0216F2203D12B006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chimehq.OperationPlus-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C9B021702203D12B006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chimehq.OperationPlus-iOSTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 		C9B021822203D2F3006A1D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */;
@@ -1247,239 +635,6 @@
 			};
 			name = Release;
 		};
-		C9B021AF2203DD34006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		C9B021B02203DD34006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = iphonesimulator;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C9B021D122047CC2006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Debug;
-		};
-		C9B021D222047CC2006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C9B021D422047CC2006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
-			};
-			name = Debug;
-		};
-		C9B021D522047CC2006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 12.1;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C9B021F422049979006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = appletvsimulator;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Debug;
-		};
-		C9B021F522049979006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = appletvsimulator;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 3;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		C9B0222122049C3E006A1D9F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		C9B0222222049C3E006A1D9F /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */;
-			buildSettings = {
-				APPLICATION_EXTENSION_API_ONLY = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 4.2;
-				TARGETED_DEVICE_FAMILY = 4;
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1510,74 +665,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C9B0216B2203D12B006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B0216C2203D12B006A1D9F /* Debug */,
-				C9B0216D2203D12B006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B0216E2203D12B006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-iOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B0216F2203D12B006A1D9F /* Debug */,
-				C9B021702203D12B006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		C9B021812203D2F3006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C9B021822203D2F3006A1D9F /* Debug */,
 				C9B021832203D2F3006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B021AE2203DD34006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus-iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B021AF2203DD34006A1D9F /* Debug */,
-				C9B021B02203DD34006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B021D022047CC2006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B021D122047CC2006A1D9F /* Debug */,
-				C9B021D222047CC2006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B021D322047CC2006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-tvOSTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B021D422047CC2006A1D9F /* Debug */,
-				C9B021D522047CC2006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B021F322049979006A1D9F /* Build configuration list for PBXNativeTarget "OperationTestingPlus-tvOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B021F422049979006A1D9F /* Debug */,
-				C9B021F522049979006A1D9F /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C9B0222022049C3E006A1D9F /* Build configuration list for PBXNativeTarget "OperationPlus-watchOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				C9B0222122049C3E006A1D9F /* Debug */,
-				C9B0222222049C3E006A1D9F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
