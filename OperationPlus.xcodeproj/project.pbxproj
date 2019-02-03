@@ -26,6 +26,7 @@
 		C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
 		C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
 		C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */; };
+		C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +82,7 @@
 		C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlusTests.xcconfig; sourceTree = "<group>"; };
 		C9B022A62205287F006A1D9F /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = SOURCE_ROOT; };
 		C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Enqueuing.swift"; sourceTree = "<group>"; };
+		C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationError.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				C9B021342203CE91006A1D9F /* OperationPlus.h */,
 				C9B021352203CE91006A1D9F /* Info.plist */,
 				C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */,
+				C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */,
 				C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */,
 				C9B0214F2203D064006A1D9F /* ProducerOperation.swift */,
 				C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */,
@@ -333,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */,
+				C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */,
 				C9B021992203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */,
 				C9B0219B2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
 				C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */,

@@ -8,11 +8,6 @@
 
 import Foundation
 
-public enum BaseOperationError: Error {
-    case dependencyAddedInInvalidState(Operation)
-    case stateTransitionInvalid(BaseOperation.State)
-}
-
 open class BaseOperation : Operation {
     public enum State {
         case notStarted
@@ -21,12 +16,12 @@ open class BaseOperation : Operation {
         case timedOut
     }
 
-    private let lock: NSLock
+    private let lock: NSRecursiveLock
     private var state: State = .notStarted
     public let timeoutInterval: TimeInterval
 
     public init(timeout: TimeInterval = .greatestFiniteMagnitude) {
-        self.lock = NSLock()
+        self.lock = NSRecursiveLock()
         self.timeoutInterval = timeout
 
         lock.name = "com.chimehq.Operation-Lock"
@@ -139,26 +134,24 @@ extension BaseOperation {
 
     func transition(to newState: State) {
         lock.lock()
+        defer { lock.unlock() }
 
         switch (state, newState) {
         case (.notStarted, .running):
             willChangeValue(forKey: "isExecuting")
             state = newState;
-            lock.unlock()
             didChangeValue(forKey: "isExecuting")
         case (.running, .finished), (.running, .timedOut):
             willChangeValue(forKey: "isExecuting")
             willChangeValue(forKey: "isFinished")
             state = newState;
-            lock.unlock()
             didChangeValue(forKey: "isFinished")
             didChangeValue(forKey: "isExecuting")
-        case (.finished, .timedOut), (.timedOut, .timedOut), (.timedOut, .finished):
-            lock.unlock()
+        case (.finished, .timedOut), (.timedOut, .finished):
+            break
         case (_, .notStarted):
             fallthrough
         case (.finished, _), (.timedOut, _), (.running, _), (.notStarted, _):
-            lock.unlock()
             handleError(.stateTransitionInvalid(newState))
         }
     }
