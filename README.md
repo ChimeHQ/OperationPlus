@@ -15,13 +15,13 @@ There are a bunch of alternatives to the NSOperation model, like reactive progra
 Carthage:
 
 ```
-    github "ChimeHQ/OperationPlus"
+github "ChimeHQ/OperationPlus"
 ```
 
 CocoaPods:
 
 ```
-    pod 'OperationPlus'
+pod 'OperationPlus'
 ```
 
 ## NSOperation Subclasses
@@ -35,94 +35,94 @@ This is a simple `NSOperation` subclass built for easier extensibility. It featu
  - Easier cancellation handling
  - Stricter state checking
 
-```
-    let a = BaseOperation(timeout: 5.0)
-    
-    // NSOperation will happily allow you do this even
-    // if `a` has finished. `BaseOperation` will not.
-    a.addDependency(another)
-    
-    // ...
-    public override func main() {
-        // This will return true if your operation is cancelled, timed out,
-        // or prematurely finished. ResultOperation subclass state will be
-        // handled correctly as well.
-        if self.checkForCancellation() {
-            return
-        }
+```swift
+let a = BaseOperation(timeout: 5.0)
+
+// NSOperation will happily allow you do this even
+// if `a` has finished. `BaseOperation` will not.
+a.addDependency(another)
+
+// ...
+public override func main() {
+    // This will return true if your operation is cancelled, timed out,
+    // or prematurely finished. ResultOperation subclass state will be
+    // handled correctly as well.
+    if self.checkForCancellation() {
+        return
     }
-    // ...
+}
+// ...
 ```
 
 **AsyncOperation**
 
 A `BaseOperation` subclass that can be used for your synchronous operations. These are any operations that need to extend their lifetime past the `main` method.
 
-```
-    import 'Foundation'
-    import 'OperationPlus'
+```swift
+import Foundation
+import OperationPlus
 
-    class MyAsyncOperation: AsyncOperation {
-        public override func main() {
-            DispatchQueue.global().async {
-                if self.checkForCancellation() {
-                    return
-                }
-
-                // do stuff
-
-                self.finish()
+class MyAsyncOperation: AsyncOperation {
+    public override func main() {
+        DispatchQueue.global().async {
+            if self.checkForCancellation() {
+                return
             }
+
+            // do stuff
+
+            self.finish()
         }
     }
+}
 ```
 
 **ResultOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
 
-```
-    import 'Foundation'
-    import 'OperationPlus'
+```swift
+import Foundation
+import OperationPlus
 
-    class MyValueOperation: ResultOperation<Int> {
-        public override func main() {
-            // do your computation
-            
-            finish(with: 42)
-        }
+class MyValueOperation: ResultOperation<Int> {
+    public override func main() {
+        // do your computation
+
+        finish(with: 42)
     }
-    
-    // ...
-    
-    let op = MyValueOperation()
-    
-    op.resultCompletionBlock = { (value) in
-        // use value here
-    }
+}
+
+// ...
+
+let op = MyValueOperation()
+
+op.resultCompletionBlock = { (value) in
+    // use value here
+}
 ```
 
 **AsyncResultOperation**
 
 A variant of `ResultOperation` that may produce a result value after the `main` method has completed executing.
 
-```
-    import 'Foundation'
-    import 'OperationPlus'
+```swift
+import Foundation
+import OperationPlus
 
-    class MyAsyncOperation: AsyncResultOperation<Int> {
-        public override func main() {
-            DispatchQueue.global().async {
-                if self.checkForCancellation() {
-                    return
-                }
-
-                // do stuff
-
-                self.finish(with: 42)
+class MyAsyncOperation: AsyncResultOperation<Int> {
+    public override func main() {
+        DispatchQueue.global().async {
+            if self.checkForCancellation() {
+                return
             }
+
+            // do stuff
+
+            self.finish(with: 42)
         }
     }
+}
 ```
 
 **AsyncBlockOperation**
@@ -133,35 +133,35 @@ A play on `NSBlockOperation`, but makes it possive to support asynchronous compl
 
 Queue creation conveniences:
 
-```
-  let a = OperationQueue(name: "myqueue")
-  let b = OperationQueue(name: "myqueue", maxConcurrentOperations: 1)
-  let c = OperationQueue.serialQueue()
-  let d = OperationQueue.serialQueue(named: "myqueue")
+```swift
+let a = OperationQueue(name: "myqueue")
+let b = OperationQueue(name: "myqueue", maxConcurrentOperations: 1)
+let c = OperationQueue.serialQueue()
+let d = OperationQueue.serialQueue(named: "myqueue")
 ```
 
 Enforcing runtime constraints on queue execution:
 
-```
-    OperationQueue.preconditionMain()
-    OperationQueue.preconditionNotMain()
+```swift
+OperationQueue.preconditionMain()
+OperationQueue.preconditionNotMain()
 ```
 
 Consise dependencies:
 
-```
-    queue.addOperation(op, dependency: opA)
-    queue.addOperation(op, dependencies: [opA, opB])
-    
-    op.addDependencies([opA, opB])
+```swift
+queue.addOperation(op, dependency: opA)
+queue.addOperation(op, dependencies: [opA, opB])
+
+op.addDependencies([opA, opB])
 ```
 
 Queueing work when a queue's current operations are complete:
 
-```
-    queue.currentOperationsFinished {
-      print("all pending ops done")
-    }
+```swift
+queue.currentOperationsFinished {
+  print("all pending ops done")
+}
 ```
 
 ### XCTest Support
@@ -180,13 +180,13 @@ A great way to test out your Operations' timeout behaviors.
 
 An `XCTestExpectation` sublass to make testing async operations a little more XCTTest-like.
 
-```
-    let op = NeverFinishingOperation()
+```swift
+let op = NeverFinishingOperation()
 
-    let expectation = OperationExpectation(operation: op)
-    expectation.isInverted = true
+let expectation = OperationExpectation(operation: op)
+expectation.isInverted = true
 
-    wait(for: [expectation], timeout: 1.0)
+wait(for: [expectation], timeout: 1.0)
 ```
 
 ### Suggestions or Feedback
