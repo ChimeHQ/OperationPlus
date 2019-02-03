@@ -45,7 +45,7 @@ a.addDependency(another)
 // ...
 public override func main() {
     // This will return true if your operation is cancelled, timed out,
-    // or prematurely finished. ResultOperation subclass state will be
+    // or prematurely finished. ProducerOperation subclass state will be
     // handled correctly as well.
     if self.checkForCancellation() {
         return
@@ -56,7 +56,7 @@ public override func main() {
 
 **AsyncOperation**
 
-A `BaseOperation` subclass that can be used for your synchronous operations. These are any operations that need to extend their lifetime past the `main` method.
+A `BaseOperation` subclass that can be used for your asynchronous operations. These are any operations that need to extend their lifetime past the `main` method.
 
 ```swift
 import Foundation
@@ -77,7 +77,7 @@ class MyAsyncOperation: AsyncOperation {
 }
 ```
 
-**ResultOperation**
+**ProducerOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
 
@@ -85,7 +85,7 @@ A `BaseOperation` subclass that yields a value. Includes a completion handler to
 import Foundation
 import OperationPlus
 
-class MyValueOperation: ResultOperation<Int> {
+class MyValueOperation: ProducerOperation<Int> {
     public override func main() {
         // do your computation
 
@@ -102,15 +102,15 @@ op.resultCompletionBlock = { (value) in
 }
 ```
 
-**AsyncResultOperation**
+**AsyncProducerOperation**
 
-A variant of `ResultOperation` that may produce a result value after the `main` method has completed executing.
+A variant of `ProducerOperation` that may produce a value value after the `main` method has completed executing.
 
 ```swift
 import Foundation
 import OperationPlus
 
-class MyAsyncOperation: AsyncResultOperation<Int> {
+class MyAsyncOperation: AsyncProducerOperation<Int> {
     public override func main() {
         DispatchQueue.global().async {
             if self.checkForCancellation() {
