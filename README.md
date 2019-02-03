@@ -10,12 +10,18 @@ OperationPlus is a small set of NSOperation subclasses and extensions on NSOpera
 
 There are a bunch of alternatives to the NSOperation model, like reactive programming. But, since Apple ships NSOperation, it gets used a lot. Once you start building real applications against it, you might find that the API is missing some important parts. OperationPlus tries to fill those in.
 
-## Installation
+## Integration
 
 Carthage:
 
 ```
     github "ChimeHQ/OperationPlus"
+```
+
+CocoaPods:
+
+```
+    pod 'OperationPlus'
 ```
 
 ## NSOperation Subclasses
