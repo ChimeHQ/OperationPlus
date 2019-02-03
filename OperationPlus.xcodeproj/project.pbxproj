@@ -25,6 +25,7 @@
 		C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
 		C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
 		C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
+		C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Creation.swift"; sourceTree = "<group>"; };
 		C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlusTests.xcconfig; sourceTree = "<group>"; };
 		C9B022A62205287F006A1D9F /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = SOURCE_ROOT; };
+		C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Enqueuing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,9 +149,9 @@
 		C9B0213E2203CE91006A1D9F /* OperationPlusTests */ = {
 			isa = PBXGroup;
 			children = (
+				C9B021412203CE91006A1D9F /* Info.plist */,
 				C9B0218E2203D556006A1D9F /* BaseOperationTests.swift */,
 				C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */,
-				C9B021412203CE91006A1D9F /* Info.plist */,
 				C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */,
 			);
 			path = OperationPlusTests;
@@ -176,6 +178,7 @@
 				C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */,
 				C9B021942203D6AA006A1D9F /* OperationQueue+Emptied.swift */,
 				C9B021952203D6AA006A1D9F /* OperationQueue+Preconditions.swift */,
+				C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				C9B0219B2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
 				C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */,
 				C9B0214E2203D04B006A1D9F /* AsyncOperation.swift in Sources */,
+				C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */,
 				C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
 				C9B021502203D064006A1D9F /* ResultOperation.swift in Sources */,
 				C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */,
