@@ -1,5 +1,5 @@
 //
-//  ResultOperation.swift
+//  ProducerOperation.swift
 //  OperationPlus
 //
 //  Created by Matt Massicotte on 2019-01-31.
@@ -8,7 +8,13 @@
 
 import Foundation
 
-open class ResultOperation<T> : BaseOperation {
+/// An alias to ProducerOperation
+///
+/// This is including for backwards compatibility. `ProducerOperation`
+/// should be used for new code.
+public typealias ResultOperation<T> = ProducerOperation<T>
+
+open class ProducerOperation<T> : BaseOperation {
     public typealias ResultBlock = (T) -> Void
 
     public var resultCompletionBlock: ResultBlock?

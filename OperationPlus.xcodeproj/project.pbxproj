@@ -11,8 +11,8 @@
 		C9B021422203CE91006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
 		C9B0214E2203D04B006A1D9F /* AsyncOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */; };
-		C9B021502203D064006A1D9F /* ResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ResultOperation.swift */; };
-		C9B021522203D086006A1D9F /* AsyncResultOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncResultOperation.swift */; };
+		C9B021502203D064006A1D9F /* ProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214F2203D064006A1D9F /* ProducerOperation.swift */; };
+		C9B021522203D086006A1D9F /* AsyncProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */; };
 		C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */; };
 		C9B021802203D2F3006A1D9F /* OperationTestingPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B0217E2203D2F3006A1D9F /* OperationTestingPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B021882203D3A2006A1D9F /* OperationExpectation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021852203D3A1006A1D9F /* OperationExpectation.swift */; };
@@ -60,8 +60,8 @@
 		C9B021412203CE91006A1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperation.swift; sourceTree = "<group>"; };
 		C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncOperation.swift; sourceTree = "<group>"; };
-		C9B0214F2203D064006A1D9F /* ResultOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultOperation.swift; sourceTree = "<group>"; };
-		C9B021512203D086006A1D9F /* AsyncResultOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncResultOperation.swift; sourceTree = "<group>"; };
+		C9B0214F2203D064006A1D9F /* ProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducerOperation.swift; sourceTree = "<group>"; };
+		C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncProducerOperation.swift; sourceTree = "<group>"; };
 		C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperation.swift; sourceTree = "<group>"; };
 		C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlus.xcconfig; sourceTree = "<group>"; };
 		C9B0217C2203D2F3006A1D9F /* OperationTestingPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationTestingPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,8 +137,8 @@
 				C9B021352203CE91006A1D9F /* Info.plist */,
 				C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */,
 				C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */,
-				C9B0214F2203D064006A1D9F /* ResultOperation.swift */,
-				C9B021512203D086006A1D9F /* AsyncResultOperation.swift */,
+				C9B0214F2203D064006A1D9F /* ProducerOperation.swift */,
+				C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */,
 				C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */,
 				C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */,
 				C9B021932203D677006A1D9F /* Extensions */,
@@ -339,9 +339,9 @@
 				C9B0214E2203D04B006A1D9F /* AsyncOperation.swift in Sources */,
 				C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */,
 				C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
-				C9B021502203D064006A1D9F /* ResultOperation.swift in Sources */,
+				C9B021502203D064006A1D9F /* ProducerOperation.swift in Sources */,
 				C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */,
-				C9B021522203D086006A1D9F /* AsyncResultOperation.swift in Sources */,
+				C9B021522203D086006A1D9F /* AsyncProducerOperation.swift in Sources */,
 				C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
