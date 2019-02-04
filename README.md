@@ -142,7 +142,17 @@ class MyAsyncOperation: AsyncProducerOperation<Int> {
 
 **AsyncBlockOperation**
 
-A play on `NSBlockOperation`, but makes it possive to support asynchronous completion without making an NSOperation subclass.
+A play on `NSBlockOperation`, but makes it possible to support asynchronous completion without making an `Operation` subclass. Great for quick, inline work.
+
+```swift
+let op = AsyncBlockOperation { (completionBlock) in
+    DispatchQueue.global().async {
+        // do some async work here, just be certain to call
+        // the completionBlock when done
+        completionBlock()
+    }
+}
+```
 
 ## NSOperation/NSOperationQueue Extensions
 
