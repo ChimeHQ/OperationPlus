@@ -27,6 +27,7 @@
 		C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
 		C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */; };
 		C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */; };
+		C9CC1D482207CA5600F7DCAE /* AsyncBlockOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +84,7 @@
 		C9B022A62205287F006A1D9F /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = SOURCE_ROOT; };
 		C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Enqueuing.swift"; sourceTree = "<group>"; };
 		C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationError.swift; sourceTree = "<group>"; };
+		C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperationTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				C9B0218E2203D556006A1D9F /* BaseOperationTests.swift */,
 				C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */,
 				C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */,
+				C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */,
 			);
 			path = OperationPlusTests;
 			sourceTree = "<group>";
@@ -355,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B021902203D556006A1D9F /* BaseOperationTests.swift in Sources */,
+				C9CC1D482207CA5600F7DCAE /* AsyncBlockOperationTests.swift in Sources */,
 				C9B0218F2203D556006A1D9F /* OperationQueueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
