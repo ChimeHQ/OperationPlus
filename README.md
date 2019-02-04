@@ -119,7 +119,7 @@ op.resultCompletionBlock = { (value) in
 
 **AsyncProducerOperation**
 
-A variant of `ProducerOperation` that may produce a value value after the `main` method has completed executing.
+A variant of `ProducerOperation` that may produce a value after the `main` method has completed executing.
 
 ```swift
 import Foundation
@@ -195,7 +195,7 @@ queue.currentOperationsFinished {
 
 **FulfillExpectationOperation**
 
-A simple NSOperation that will fulfil an `XCTestExpectation` when complete. Super-useful when used setup with dependencies on your other operations.
+A simple NSOperation that will fulfill an `XCTestExpectation` when complete. Super-useful when used with dependencies on your other operations.
 
 **NeverFinishingOperation**
 
