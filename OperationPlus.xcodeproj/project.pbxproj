@@ -28,6 +28,9 @@
 		C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */; };
 		C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */; };
 		C9CC1D482207CA5600F7DCAE /* AsyncBlockOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */; };
+		C9CC1D4C2207D64D00F7DCAE /* ConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4B2207D64D00F7DCAE /* ConsumerProducerOperation.swift */; };
+		C9CC1D4E2207D65B00F7DCAE /* ProducerConsumerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4D2207D65B00F7DCAE /* ProducerConsumerTests.swift */; };
+		C9CC1D5422088CF400F7DCAE /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D5322088CF400F7DCAE /* TestHelpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,9 @@
 		C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Enqueuing.swift"; sourceTree = "<group>"; };
 		C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationError.swift; sourceTree = "<group>"; };
 		C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperationTests.swift; sourceTree = "<group>"; };
+		C9CC1D4B2207D64D00F7DCAE /* ConsumerProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerProducerOperation.swift; sourceTree = "<group>"; };
+		C9CC1D4D2207D65B00F7DCAE /* ProducerConsumerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProducerConsumerTests.swift; sourceTree = "<group>"; };
+		C9CC1D5322088CF400F7DCAE /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,7 @@
 				C9B0214F2203D064006A1D9F /* ProducerOperation.swift */,
 				C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */,
 				C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */,
+				C9CC1D4B2207D64D00F7DCAE /* ConsumerProducerOperation.swift */,
 				C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */,
 				C9B021932203D677006A1D9F /* Extensions */,
 			);
@@ -159,6 +166,8 @@
 				C9B0218D2203D556006A1D9F /* OperationQueueTests.swift */,
 				C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */,
 				C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */,
+				C9CC1D4D2207D65B00F7DCAE /* ProducerConsumerTests.swift */,
+				C9CC1D5322088CF400F7DCAE /* TestHelpers.swift */,
 			);
 			path = OperationPlusTests;
 			sourceTree = "<group>";
@@ -341,6 +350,7 @@
 				C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */,
 				C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */,
 				C9B021992203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */,
+				C9CC1D4C2207D64D00F7DCAE /* ConsumerProducerOperation.swift in Sources */,
 				C9B0219B2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
 				C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */,
 				C9B0214E2203D04B006A1D9F /* AsyncOperation.swift in Sources */,
@@ -358,6 +368,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C9B021902203D556006A1D9F /* BaseOperationTests.swift in Sources */,
+				C9CC1D5422088CF400F7DCAE /* TestHelpers.swift in Sources */,
+				C9CC1D4E2207D65B00F7DCAE /* ProducerConsumerTests.swift in Sources */,
 				C9CC1D482207CA5600F7DCAE /* AsyncBlockOperationTests.swift in Sources */,
 				C9B0218F2203D556006A1D9F /* OperationQueueTests.swift in Sources */,
 			);
