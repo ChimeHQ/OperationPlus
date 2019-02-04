@@ -34,6 +34,8 @@ This is a simple `NSOperation` subclass built for easier extensibility. It featu
  - Timeout support
  - Easier cancellation handling
  - Stricter state checking
+ - Built-in asynchrous support
+ - Straight-foward customization
 
 ```swift
 let a = BaseOperation(timeout: 5.0)
@@ -77,6 +79,19 @@ class MyAsyncOperation: AsyncOperation {
 }
 ```
 
+There's also nothing special about this class at all -- it's there just for convenience. If you want, you can just subclass `BaseOperation` directly and override one method.
+
+```swift
+import Foundation
+import OperationPlus
+
+class MyAsyncOperation: BaseOperation {
+    override open var isAsynchronous: Bool {
+        return true
+    }
+}
+```
+
 **ProducerOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
@@ -89,7 +104,7 @@ class MyValueOperation: ProducerOperation<Int> {
     public override func main() {
         // do your computation
 
-        finish(with: 42)
+        self.finish(with: 42)
     }
 }
 
