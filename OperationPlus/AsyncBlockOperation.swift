@@ -9,9 +9,11 @@
 import Foundation
 
 public class AsyncBlockOperation: AsyncOperation {
-    private let block: (@escaping () -> Void) -> Void
+    public typealias CompletionHandler = (@escaping () -> Void) -> Void
 
-    public init(block: @escaping (@escaping () -> Void) -> Void) {
+    private let block: CompletionHandler
+
+    public init(block: @escaping CompletionHandler) {
         self.block = block
     }
 

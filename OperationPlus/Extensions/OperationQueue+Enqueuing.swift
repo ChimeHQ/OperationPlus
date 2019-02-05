@@ -18,4 +18,8 @@ extension OperationQueue {
     public func addOperations(_ ops: [Operation]) {
         addOperations(ops, waitUntilFinished: false)
     }
+
+    public func addAsyncOperation(block: @escaping AsyncBlockOperation.CompletionHandler) {
+        addOperation(AsyncBlockOperation(block: block))
+    }
 }
