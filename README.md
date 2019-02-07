@@ -92,7 +92,7 @@ class MyAsyncOperation: BaseOperation {
 }
 ```
 
-**ProducerOperation**
+**ResultOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
 
@@ -100,7 +100,7 @@ A `BaseOperation` subclass that yields a value. Includes a completion handler to
 import Foundation
 import OperationPlus
 
-class MyValueOperation: ProducerOperation<Int> {
+class MyValueOperation: ResultOperation<Int> {
     public override func main() {
         // do your computation
 
@@ -117,15 +117,15 @@ op.resultCompletionBlock = { (value) in
 }
 ```
 
-**AsyncProducerOperation**
+**AsyncResultOperation**
 
-A variant of `ProducerOperation` that may produce a value after the `main` method has completed executing.
+A variant of `ResultOperation` that may produce a value after the `main` method has completed executing.
 
 ```swift
 import Foundation
 import OperationPlus
 
-class MyAsyncOperation: AsyncProducerOperation<Int> {
+class MyAsyncOperation: AsyncResultOperation<Int> {
     public override func main() {
         DispatchQueue.global().async {
             if self.checkForCancellation() {
