@@ -62,4 +62,19 @@ class OperationQueueTests: XCTestCase {
 
         wait(for: [expectation], timeout: 1.0)
     }
+
+    func testAddAsyncBlock() {
+        let queue = OperationQueue.serialQueue()
+
+        let blockExpecation = XCTestExpectation(description: "Block Expectation")
+
+        queue.addAsyncOperation { (completionHandler) in
+            blockExpecation.fulfill()
+            completionHandler()
+        }
+
+        let nextOpExpectation = OperationExpectation(operation: Operation(), queue: queue)
+
+        wait(for: [blockExpecation, nextOpExpectation], timeout: 1.0, enforceOrder: true)
+    }
 }

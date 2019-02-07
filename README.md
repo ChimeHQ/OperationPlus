@@ -189,6 +189,17 @@ queue.currentOperationsFinished {
 }
 ```
 
+Convenient inline functions:
+
+```swift
+queue.addAsyncOperation { (completionHandler) in
+    DispatchQueue.global().async {
+        // do some async work
+        completionHandler()
+    }
+}
+```
+
 ### XCTest Support
 
 **OperationTestingPlus** is an optional micro-framework to help make your XCTest-based tests a little nicer. When using Carthage, it is built as a static framework to help ease integration with your testing targets.
