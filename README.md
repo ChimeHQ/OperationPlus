@@ -26,6 +26,13 @@ pod 'OperationPlus'
 
 ## NSOperation Subclasses
 
+ - BaseOperation: provides core functionality for easier NSOperation subclassing
+ - AsyncOperation: convenience wrapper around BaseOperation for async support
+ - AsyncBlockOperation: convenience class for inline async support
+ - (Async)ProducerOperation: produces an output
+ - (Async)ConsumerOperation: accepts an input from a ProducerOperation
+ - (Async)ConsumerProducerOperation: accepst an input from a ProducerOperation and also produces an output
+
 **BaseOperation**
 
 This is a simple `NSOperation` subclass built for easier extensibility. It features:
@@ -92,7 +99,7 @@ class MyAsyncOperation: BaseOperation {
 }
 ```
 
-**ResultOperation**
+**ProducerOperation**
 
 A `BaseOperation` subclass that yields a value. Includes a completion handler to access the value.
 
@@ -100,7 +107,7 @@ A `BaseOperation` subclass that yields a value. Includes a completion handler to
 import Foundation
 import OperationPlus
 
-class MyValueOperation: ResultOperation<Int> {
+class MyValueOperation: ProducerOperation<Int> {
     public override func main() {
         // do your computation
 
@@ -117,15 +124,15 @@ op.resultCompletionBlock = { (value) in
 }
 ```
 
-**AsyncResultOperation**
+**AsyncProducerOperation**
 
-A variant of `ResultOperation` that may produce a value after the `main` method has completed executing.
+A variant of `ProducerOperation` that may produce a value after the `main` method has completed executing.
 
 ```swift
 import Foundation
 import OperationPlus
 
-class MyAsyncOperation: AsyncResultOperation<Int> {
+class MyAsyncOperation: AsyncProducerOperation<Int> {
     public override func main() {
         DispatchQueue.global().async {
             if self.checkForCancellation() {
@@ -138,6 +145,30 @@ class MyAsyncOperation: AsyncResultOperation<Int> {
         }
     }
 }
+```
+
+**ConsumerOperation** and **AsyncConsumerOperation**
+
+A `BaseOperation` sublass that accepts the input of a `ProducerOperation`.
+
+```swift
+import Foundation
+import OperationPlus
+
+class MyConsumerOperation: ConsumerOperation<Int> {
+    override func main() {
+        guard let value = producerValue else {
+            // handle failure in some way
+        }
+    }
+    
+    override func main(with value: Int) {
+        // make use of value here, or automatically
+        // fail if it wasn't succesfully produced
+    }
+}
+
+let op = MyConsumerOperation(producerOp: myIntProducerOperation)
 ```
 
 **AsyncBlockOperation**
