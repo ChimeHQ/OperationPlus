@@ -231,6 +231,12 @@ queue.addAsyncOperation { (completionHandler) in
 }
 ```
 
+Delays:
+
+```swift
+queue.addOperation(op, afterDelay: 5.0)
+```
+
 ### XCTest Support
 
 **OperationTestingPlus** is an optional micro-framework to help make your XCTest-based tests a little nicer. When using Carthage, it is built as a static framework to help ease integration with your testing targets.

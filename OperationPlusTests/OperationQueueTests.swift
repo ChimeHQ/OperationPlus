@@ -77,4 +77,17 @@ class OperationQueueTests: XCTestCase {
 
         wait(for: [blockExpecation, nextOpExpectation], timeout: 1.0, enforceOrder: true)
     }
+
+    func testAddOperationAfterDelay() {
+        let queue = OperationQueue()
+        let op = Operation()
+        let dependentOp = Operation()
+        dependentOp.addDependency(op)
+
+        queue.addOperation(op, afterDelay: 1.0)
+
+        let expectation = OperationExpectation(operation: dependentOp, queue: queue)
+
+        wait(for: [expectation], timeout: 2.0)
+    }
 }

@@ -32,3 +32,19 @@ extension OperationQueue {
         addOperation(AsyncBlockOperation(block: block))
     }
 }
+
+extension OperationQueue {
+    /// Adds the specified operation to the queue after a delay.
+    ///
+    /// This method schedules an `addOperation` call after the specified delay.
+    ///
+    /// - Parameter op: The operation to be added to the queue.
+    /// - Parameter delay: The amount of time to wait before scheduling op.
+    public func addOperation(_ op: Operation, afterDelay delay: TimeInterval) {
+        let deadlineTime = DispatchTime.now() + delay
+
+        DispatchQueue.global().asyncAfter(deadline: deadlineTime) {
+            self.addOperation(op)
+        }
+    }
+}
