@@ -12,6 +12,14 @@ There are a bunch of alternatives to the NSOperation model, like reactive progra
 
 ## Integration
 
+Swift Package Manager:
+
+```swift
+dependencies: [
+        .package(url: "https://github.com/ChimeHQ/OperationPlus.git")
+]
+```
+
 Carthage:
 
 ```

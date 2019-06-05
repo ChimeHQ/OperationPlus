@@ -1,2 +1,5 @@
-Carthage
-Build
+/Carthage
+/Build
+.DS_Store
+/.build
+/Packages
