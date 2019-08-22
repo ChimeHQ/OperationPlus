@@ -47,4 +47,14 @@ extension OperationQueue {
             self.addOperation(op)
         }
     }
+
+    /// Invokes the block on the queue after a delay.
+    ///
+    /// This method schedules an `addOperation` call after the specified delay.
+    ///
+    /// - Parameter delay: The amount of time to wait before scheduling op.
+    /// - Parameter block: The block to be invoked on the queue.
+    public func addOperation(afterDelay delay: TimeInterval, block: @escaping () -> Void) {
+        addOperation(BlockOperation(block: block), afterDelay: delay)
+    }
 }
