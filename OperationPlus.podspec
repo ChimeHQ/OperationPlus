@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'OperationPlus'
-  s.version      = '1.2.0'
+  s.version      = '1.3.0'
   s.summary      = 'NSOperation\'s missing pieces'
 
   s.homepage     = 'https://github.com/ChimeHQ/OperationPlus'
@@ -18,5 +18,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target = '3.0'
 
   s.cocoapods_version = '>= 1.4.0'
-  s.swift_version = '4.2'
+  s.swift_version = '5.0'
 end
