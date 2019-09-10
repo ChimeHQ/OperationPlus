@@ -2,7 +2,6 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/OperationPlus.svg)](https://cocoapods.org/)
 [![CocoaPods](https://img.shields.io/cocoapods/p/OperationPlus.svg)](https://cocoapods.org/)
-![](https://img.shields.io/badge/Swift-4.2-orange.svg)
 
 # OperationPlus
 
