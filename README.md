@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/ChimeHQ/OperationPlus.svg?branch=master)](https://travis-ci.org/ChimeHQ/OperationPlus)
+[![Github CI](https://github.com/ChimeHQ/OperationPlus/workflows/CI/badge.svg)](https://github.com/ChimeHQ/OperationPlus/actions)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg)](https://github.com/Carthage/Carthage)
 [![CocoaPods](https://img.shields.io/cocoapods/v/OperationPlus.svg)](https://cocoapods.org/)
 [![CocoaPods](https://img.shields.io/cocoapods/p/OperationPlus.svg)](https://cocoapods.org/)
