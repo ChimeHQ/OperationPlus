@@ -14,4 +14,10 @@ extension Operation {
             addDependency(op)
         }
     }
+
+    public func addDependencies(_ dependencies: Set<Operation>) {
+        for op in dependencies {
+            addDependency(op)
+        }
+    }
 }

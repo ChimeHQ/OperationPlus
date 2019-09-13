@@ -90,4 +90,36 @@ class OperationQueueTests: XCTestCase {
 
         wait(for: [expectation], timeout: 2.0)
     }
+
+    func testAddDependencies() {
+        let queue = OperationQueue()
+        let opA = Operation()
+        let opB = Operation()
+        let opC = Operation()
+
+        queue.addOperations([opA, opB])
+        queue.addOperation(opC, dependencies: [opB, opA])
+
+        XCTAssertEqual(opA.dependencies.count, 0)
+        XCTAssertEqual(opB.dependencies.count, 0)
+        XCTAssertEqual(opC.dependencies.count, 2)
+        XCTAssertTrue(opC.dependencies.contains(opA))
+        XCTAssertTrue(opC.dependencies.contains(opB))
+    }
+
+    func testAddSetDependencies() {
+        let queue = OperationQueue()
+        let opA = Operation()
+        let opB = Operation()
+        let opC = Operation()
+
+        queue.addOperations([opA, opB])
+        queue.addOperation(opC, dependencies: Set([opB, opA]))
+
+        XCTAssertEqual(opA.dependencies.count, 0)
+        XCTAssertEqual(opB.dependencies.count, 0)
+        XCTAssertEqual(opC.dependencies.count, 2)
+        XCTAssertTrue(opC.dependencies.contains(opA))
+        XCTAssertTrue(opC.dependencies.contains(opB))
+    }
 }

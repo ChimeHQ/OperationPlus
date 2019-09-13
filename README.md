@@ -215,8 +215,10 @@ Consise dependencies:
 ```swift
 queue.addOperation(op, dependency: opA)
 queue.addOperation(op, dependencies: [opA, opB])
+queue.addOperation(op, dependencies: Set([opA, opB]))
 
 op.addDependencies([opA, opB])
+op.addDependencies(Set([opA, opB]))
 ```
 
 Queueing work when a queue's current operations are complete:
@@ -242,6 +244,9 @@ Delays:
 
 ```swift
 queue.addOperation(op, afterDelay: 5.0)
+queue.addOperation(afterDelay: 5.0) {
+  // work
+}
 ```
 
 ### XCTest Support

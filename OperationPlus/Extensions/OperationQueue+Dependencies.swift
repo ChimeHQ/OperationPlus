@@ -20,5 +20,11 @@ extension OperationQueue {
 
         addOperation(operation)
     }
+
+    public func addOperation(_ operation: Operation, dependencies: Set<Operation>) {
+        operation.addDependencies(dependencies)
+
+        addOperation(operation)
+    }
 }
 
