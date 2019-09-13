@@ -55,20 +55,3 @@ open class ConsumerProducerOperation<Input, Output>: ProducerOperation<Output> {
         finish()
     }
 }
-
-/// An asynchronous variant of ConsumerProducerOperation
-open class AsyncConsumerProducerOperation<Input, Output>: ConsumerProducerOperation<Input, Output> {
-    override open var isAsynchronous: Bool {
-        return true
-    }
-}
-
-/// An operation that depends on and uses the value of a ProducerOperation
-public typealias ConsumerOperation<Input> = ConsumerProducerOperation<Input, Void>
-
-/// An asynchronous variant of ConsumerOperation
-open class AsyncConsumerOperation<Input>: ConsumerOperation<Input> {
-    override open var isAsynchronous: Bool {
-        return true
-    }
-}
