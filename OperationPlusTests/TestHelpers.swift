@@ -26,8 +26,8 @@ class IntProducerOperation: ProducerOperation<Int> {
 }
 
 class IntToBoolOperation: ConsumerProducerOperation<Int, Bool> {
-    override func main(with value: Int) {
-        finish(with: value == 42)
+    override func main(with producedValue: Int) {
+        finish(with: producedValue == 42)
     }
 }
 

@@ -36,12 +36,12 @@ open class ConsumerProducerOperation<Input, Output>: ProducerOperation<Output> {
     }
 
     open override func main() {
-        guard let value = producerValue else {
+        guard let producedValue = producerValue else {
             finish()
             return
         }
 
-        main(with: value)
+        main(with: producedValue)
     }
 
     /// A main entry point with a non-optional value
@@ -50,8 +50,8 @@ open class ConsumerProducerOperation<Input, Output>: ProducerOperation<Output> {
     /// dependency successfully produces a value. Otherwise,
     /// this operation will call finish() directly.
     ///
-    /// - Parameter value: The ProducerOperation's value, if non-optional
-    open func main(with value: Input) {
+    /// - Parameter producedValue: The ProducerOperation's value, if non-optional
+    open func main(with producedValue: Input) {
         finish()
     }
 }
