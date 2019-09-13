@@ -21,6 +21,16 @@ class OperationQueueTests: XCTestCase {
         XCTAssertEqual(opA.dependencies, [opB])
     }
 
+    func testDependency() {
+        let opA = Operation()
+        let opB = Operation()
+        let queue = OperationQueue()
+
+        queue.addOperation(opA, dependency: opB)
+
+        XCTAssertEqual(opA.dependencies, [opB])
+    }
+
     func testConvenienceInitializer() {
         let queue = OperationQueue(name: "MyQueue", maxConcurrentOperations: 10)
 
