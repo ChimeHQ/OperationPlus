@@ -5,9 +5,9 @@
 
 # OperationPlus
 
-OperationPlus is a small set of NSOperation subclasses and extensions on NSOperation/NSOperationQueue. Its goal is to fill in NSOperation API's missing pieces. You don't need to learn anything new to use it.
+OperationPlus is a set of `NSOperation` subclasses and extensions on `NSOperation`/`NSOperationQueue`. Its goal is to fill in the API's missing pieces. You don't need to learn anything new to use it.
 
-There are a bunch of alternatives to the NSOperation model, like reactive programming. But, since Apple ships NSOperation, it gets used a lot. Once you start building real applications against it, you might find that the API is missing some important parts. OperationPlus tries to fill those in.
+There are a bunch of alternatives to the NSOperation model, most notably Combine. But, Combine is very new, and only usable on the most recent OS releases. Apple has been shipping NSOperation for years, and it gets used a lot. Once you start building real applications against it, you might find that the API is missing some important parts. OperationPlus tries to help make things more convenient and composable.
 
 ## Integration
 
@@ -15,7 +15,7 @@ Swift Package Manager:
 
 ```swift
 dependencies: [
-        .package(url: "https://github.com/ChimeHQ/OperationPlus.git")
+    .package(url: "https://github.com/ChimeHQ/OperationPlus.git")
 ]
 ```
 
@@ -33,12 +33,12 @@ pod 'OperationPlus'
 
 ## NSOperation Subclasses
 
- - BaseOperation: provides core functionality for easier NSOperation subclassing
- - AsyncOperation: convenience wrapper around BaseOperation for async support
- - AsyncBlockOperation: convenience class for inline async support
- - (Async)ProducerOperation: produces an output
- - (Async)ConsumerOperation: accepts an input from a ProducerOperation
- - (Async)ConsumerProducerOperation: accepst an input from a ProducerOperation and also produces an output
+ - `BaseOperation`: provides core functionality for easier `NSOperation` subclassing
+ - `AsyncOperation`: convenience wrapper around `BaseOperation` for async support
+ - `AsyncBlockOperation`: convenience class for inline async support
+ - `(Async)ProducerOperation`: produces an output
+ - `(Async)ConsumerOperation`: accepts an input from a `ProducerOperation`
+ - `(Async)ConsumerProducerOperation`: accepts an input from a `ProducerOperation` and also produces an output
 
 **BaseOperation**
 
