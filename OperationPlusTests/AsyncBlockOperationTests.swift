@@ -13,9 +13,13 @@ import OperationTestingPlus
 class AsyncBlockOperationTests: XCTestCase {
     func testCallingCompletionBlock() {
         let op = AsyncBlockOperation { (completionBlock) in
-            completionBlock()
+            DispatchQueue.global().async {
+                completionBlock()
+            }
         }
 
+        XCTAssertTrue(op.isAsynchronous)
+        
         let expectation = OperationExpectation(operation: op)
 
         wait(for: [expectation], timeout: 1.0)
