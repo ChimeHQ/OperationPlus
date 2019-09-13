@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// An operation for enqueuing inline work that can be completed with a callback
 public class AsyncBlockOperation: AsyncOperation {
     public typealias CompletionHandler = (@escaping () -> Void) -> Void
 
