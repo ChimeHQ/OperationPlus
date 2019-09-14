@@ -10,7 +10,7 @@ import Foundation
 
 /// An asynchronous variant of ConsumerOperation
 open class AsyncConsumerOperation<Input>: ConsumerOperation<Input> {
-    override public var isAsynchronous: Bool {
+    override open var isAsynchronous: Bool {
         return true
     }
 }
