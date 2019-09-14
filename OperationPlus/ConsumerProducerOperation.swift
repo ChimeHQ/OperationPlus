@@ -47,8 +47,12 @@ open class ConsumerProducerOperation<Input, Output>: ProducerOperation<Output> {
     /// A main entry point with a non-optional value
     ///
     /// This method is only invoked if the ProducerOperation
-    /// dependency successfully produces a value. Otherwise,
+    /// dependency successfully produces a non-nil value. Otherwise,
     /// this operation will call finish() directly.
+    ///
+    /// This behavior is particularly useful for short-circuiting
+    /// downstream work that doesn't need to happen if a dependency fails
+    /// to produce a value.
     ///
     /// - Parameter producedValue: The ProducerOperation's value, if non-optional
     open func main(with producedValue: Input) {
