@@ -10,6 +10,10 @@
 		C9494208232C040700BCFC88 /* ConsumerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494206232C040600BCFC88 /* ConsumerOperation.swift */; };
 		C9494209232C040700BCFC88 /* AsyncConsumerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494207232C040600BCFC88 /* AsyncConsumerOperation.swift */; };
 		C949420B232C043E00BCFC88 /* AsyncConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949420A232C043D00BCFC88 /* AsyncConsumerProducerOperation.swift */; };
+		C949420D232C7C6E00BCFC88 /* BlockProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949420C232C7C6E00BCFC88 /* BlockProducerOperation.swift */; };
+		C949420F232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */; };
+		C9494211232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */; };
+		C9494213232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */; };
 		C9B0213B2203CE91006A1D9F /* OperationPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B021312203CE91006A1D9F /* OperationPlus.framework */; };
 		C9B021422203CE91006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
@@ -64,6 +68,10 @@
 		C9494206232C040600BCFC88 /* ConsumerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsumerOperation.swift; sourceTree = "<group>"; };
 		C9494207232C040600BCFC88 /* AsyncConsumerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncConsumerOperation.swift; sourceTree = "<group>"; };
 		C949420A232C043D00BCFC88 /* AsyncConsumerProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncConsumerProducerOperation.swift; sourceTree = "<group>"; };
+		C949420C232C7C6E00BCFC88 /* BlockProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlockProducerOperation.swift; sourceTree = "<group>"; };
+		C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockProducerOperation.swift; sourceTree = "<group>"; };
+		C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
+		C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
 		C9B021312203CE91006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B021342203CE91006A1D9F /* OperationPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationPlus.h; sourceTree = "<group>"; };
 		C9B021352203CE91006A1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -155,12 +163,16 @@
 				C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */,
 				C9B0214D2203D04B006A1D9F /* AsyncOperation.swift */,
 				C9B0214F2203D064006A1D9F /* ProducerOperation.swift */,
+				C949420C232C7C6E00BCFC88 /* BlockProducerOperation.swift */,
+				C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */,
 				C9B021512203D086006A1D9F /* AsyncProducerOperation.swift */,
 				C9B021532203D0A6006A1D9F /* AsyncBlockOperation.swift */,
 				C9CC1D4B2207D64D00F7DCAE /* ConsumerProducerOperation.swift */,
 				C9494206232C040600BCFC88 /* ConsumerOperation.swift */,
 				C9494207232C040600BCFC88 /* AsyncConsumerOperation.swift */,
 				C949420A232C043D00BCFC88 /* AsyncConsumerProducerOperation.swift */,
+				C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */,
+				C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */,
 				C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */,
 				C9B021932203D677006A1D9F /* Extensions */,
 			);
@@ -359,6 +371,7 @@
 				C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */,
 				C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */,
 				C9B021992203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */,
+				C949420D232C7C6E00BCFC88 /* BlockProducerOperation.swift in Sources */,
 				C9CC1D4C2207D64D00F7DCAE /* ConsumerProducerOperation.swift in Sources */,
 				C9B0219B2203D6AA006A1D9F /* OperationQueue+Preconditions.swift in Sources */,
 				C9B021542203D0A6006A1D9F /* AsyncBlockOperation.swift in Sources */,
@@ -369,9 +382,12 @@
 				C9B021502203D064006A1D9F /* ProducerOperation.swift in Sources */,
 				C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */,
 				C9B021522203D086006A1D9F /* AsyncProducerOperation.swift in Sources */,
+				C9494211232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift in Sources */,
 				C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */,
 				C949420B232C043E00BCFC88 /* AsyncConsumerProducerOperation.swift in Sources */,
+				C949420F232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift in Sources */,
 				C9494209232C040700BCFC88 /* AsyncConsumerOperation.swift in Sources */,
+				C9494213232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -561,7 +577,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -588,7 +604,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
+				MARKETING_VERSION = 1.4.0;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};

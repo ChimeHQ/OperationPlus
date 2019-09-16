@@ -55,14 +55,18 @@ open class BaseOperation : Operation {
         transition(to: .timedOut)
     }
 
+    func prepareForMain() {
+        transition(to: .running)
+
+        setupTimeout()
+    }
+
     override open func start() {
         if checkForCancellation() {
             return
         }
 
-        transition(to: .running)
-
-        setupTimeout()
+        prepareForMain()
 
         main()
     }

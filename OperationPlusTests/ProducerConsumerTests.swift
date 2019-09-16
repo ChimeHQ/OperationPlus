@@ -73,4 +73,86 @@ class ProducerConsumerTests: XCTestCase {
         XCTAssertTrue(opC.isFinished)
         XCTAssertNil(opC.producerValue)
     }
+
+    func testCallingAsyncCompletionCallback() {
+        let op = AsyncBlockProducerOperation<Int> { (completionBlock) in
+            DispatchQueue.global().async {
+                completionBlock(42)
+            }
+        }
+
+        XCTAssertNil(op.value)
+        XCTAssertTrue(op.isAsynchronous)
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: 1.0)
+
+        XCTAssertTrue(op.isFinished)
+        XCTAssertEqual(op.value, 42)
+    }
+
+    func testReturningValueFromBlockProducer() {
+        let op = BlockProducerOperation<Int> {
+            return 42
+        }
+
+        XCTAssertNil(op.value)
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: 1.0)
+
+        XCTAssertTrue(op.isFinished)
+        XCTAssertEqual(op.value, 42)
+    }
+
+    func testReturningNilFromBlockProducer() {
+        let op = BlockProducerOperation<Int> {
+            return nil
+        }
+
+        XCTAssertNil(op.value)
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: 1.0)
+
+        XCTAssertTrue(op.isFinished)
+        XCTAssertNil(op.value)
+    }
+
+    func testCachingFromProducerOperation() {
+        let op = IntProducerOperation(intValue: 42)
+        var writeValue = 0
+
+        op.readCacheBlock = { 5 }
+        op.writeCacheBlock = { writeValue = $0 }
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: 1.0)
+
+        XCTAssertTrue(op.isFinished)
+        XCTAssertEqual(op.value, 5)
+        XCTAssertEqual(writeValue, 5)
+    }
+
+    func testBlockConsumerProducerOperation() {
+        let opA = IntProducerOperation(intValue: 10)
+        let blockOp = BlockConsumerProducerOperation<Int, Int>(producerOp: opA) { (producedValue) in
+            return producedValue * 10
+        }
+        let opB = IntConsumerOperation(producerOp: blockOp)
+
+        let expectation = OperationExpectation(operations: [opA, blockOp, opB])
+
+        wait(for: [expectation], timeout: 1.0)
+
+        XCTAssertTrue(opA.isFinished)
+        XCTAssertTrue(blockOp.isFinished)
+        XCTAssertEqual(blockOp.producerValue, 10)
+        XCTAssertTrue(opB.isFinished)
+        XCTAssertEqual(opB.producerValue, 100)
+    }
 }
