@@ -171,7 +171,7 @@ class MyConsumerOperation: ConsumerOperation<Int> {
     
     override func main(with value: Int) {
         // make use of value here, or automatically
-        // fail if it wasn't succesfully produced
+        // fail if it wasn't successfully produced
     }
 }
 
