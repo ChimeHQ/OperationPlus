@@ -15,10 +15,16 @@ import Foundation
 public typealias ResultOperation<T> = ProducerOperation<T>
 
 open class ProducerOperation<T> : BaseOperation {
+    public enum ResultCompletionBlockBehavior {
+        case onCompletionOnly
+        case onTimeOut(T)
+    }
+
     public typealias ResultBlock = (T) -> Void
 
     public var resultCompletionBlock: ResultBlock?
     public var value: T?
+    public var resultCompletionBlockBehavior = ResultCompletionBlockBehavior.onCompletionOnly
 
     /// Block to return a cached value
     ///
@@ -39,21 +45,24 @@ open class ProducerOperation<T> : BaseOperation {
         self.value = v
         writeCacheBlock?(v)
 
-        let invokeBlock = !(isCancelled || isTimedOut)
-
-        if invokeBlock {
+        switch (resultCompletionBlockBehavior, isCancelled, isTimedOut) {
+        case (_, false, false):
             resultCompletionBlock?(v)
+        case (_, _, true):
+            return // do not call finish in this case
+        default:
+            break
         }
 
         finish()
     }
 
     override open func start() {
+        beginExecution()
+
         if checkForCancellation() {
             return
         }
-
-        prepareForMain()
 
         if let v = readCacheBlock?() {
             self.finish(with: v)
@@ -61,5 +70,17 @@ open class ProducerOperation<T> : BaseOperation {
         }
 
         main()
+    }
+
+    override open func timedOut() {
+        super.timedOut()
+
+        switch (resultCompletionBlockBehavior, isCancelled, isTimedOut) {
+        case (.onTimeOut(let v), _, true):
+            self.value = v
+            resultCompletionBlock?(v)
+        default:
+            break
+        }
     }
 }

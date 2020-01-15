@@ -155,4 +155,18 @@ class ProducerConsumerTests: XCTestCase {
         XCTAssertTrue(opB.isFinished)
         XCTAssertEqual(opB.producerValue, 100)
     }
+
+    func testProducerTimeOutValue() {
+        let op = NeverFinishingProducerOperation<Int>(timeout: 0.1)
+        op.resultCompletionBlockBehavior = .onTimeOut(10)
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: op.timeoutInterval * 2.0)
+
+        XCTAssertTrue(op.isTimedOut)
+        XCTAssertTrue(op.isFinished)
+        XCTAssertTrue(op.isCancelled)
+        XCTAssertEqual(op.value, 10)
+    }
 }

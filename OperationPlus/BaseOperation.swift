@@ -13,12 +13,12 @@ open class BaseOperation : Operation {
         case notStarted
         case running
         case finished
-        case timedOut
     }
 
     private let lock: NSRecursiveLock
     private var state: State = .notStarted
     public let timeoutInterval: TimeInterval
+    private var hasTimedOut: Bool = false
 
     public init(timeout: TimeInterval = .greatestFiniteMagnitude) {
         self.lock = NSRecursiveLock()
@@ -48,25 +48,49 @@ open class BaseOperation : Operation {
         lock.lock()
         defer { lock.unlock() }
 
-        return state == .finished || state == .timedOut
+        return state == .finished
     }
 
+    open var isTimedOut: Bool {
+        lock.lock()
+        defer { lock.unlock() }
+
+        return hasTimedOut
+    }
+
+    private func markTimedOut() {
+        lock.lock()
+        defer { lock.unlock() }
+
+        if isFinished {
+            return
+        }
+
+        hasTimedOut = true
+        timedOut()
+    }
+
+    /// Called when an operation times out.
+    ///
+    /// This is a useful hook for subclassers. By default, this will call cancel() and then finish(). If you
+    /// do override this method, be sure to either call super or explicitly finish the operation.
     open func timedOut() {
-        transition(to: .timedOut)
+        cancel()
+        finish()
     }
 
-    func prepareForMain() {
+    func beginExecution() {
         transition(to: .running)
 
         setupTimeout()
     }
 
     override open func start() {
+        beginExecution()
+
         if checkForCancellation() {
             return
         }
-
-        prepareForMain()
 
         main()
     }
@@ -90,13 +114,6 @@ open class BaseOperation : Operation {
 }
 
 extension BaseOperation {
-    public var isTimedOut: Bool {
-        lock.lock()
-        defer { lock.unlock() }
-
-        return state == .timedOut
-    }
-
     private var deadlineTime: DispatchTime {
         return DispatchTime.now() + .seconds(Int(timeoutInterval))
     }
@@ -106,30 +123,37 @@ extension BaseOperation {
             return
         }
 
+        guard !isCancelled else {
+            return
+        }
+
         DispatchQueue.global().asyncAfter(deadline: deadlineTime) { [weak self] in
             guard let op = self else {
                 return
             }
 
-            op.timedOut()
+            op.markTimedOut()
         }
     }
 }
 
 extension BaseOperation {
     public func finish() {
+        lock.lock()
+        defer { lock.unlock() }
+
+        // If we've timed out, it's still likely that finish
+        // is going to be called again. We should be ok with that.
+        if isTimedOut && isFinished {
+            return
+        }
+
         transition(to: .finished)
     }
 
     public func checkForCancellation() -> Bool {
         if isCancelled {
             finish()
-            return true
-        }
-
-        // this is just a guard to protect against
-        // accidental early finishes
-        if isFinished {
             return true
         }
 
@@ -145,17 +169,13 @@ extension BaseOperation {
             willChangeValue(forKey: "isExecuting")
             state = newState;
             didChangeValue(forKey: "isExecuting")
-        case (.running, .finished), (.running, .timedOut):
+        case (.running, .finished):
             willChangeValue(forKey: "isExecuting")
             willChangeValue(forKey: "isFinished")
             state = newState;
             didChangeValue(forKey: "isFinished")
             didChangeValue(forKey: "isExecuting")
-        case (.finished, .timedOut), (.timedOut, .finished):
-            break
-        case (_, .notStarted):
-            fallthrough
-        case (.finished, _), (.timedOut, _), (.running, _), (.notStarted, _):
+        case (_, .notStarted), (.finished, _), (.running, _), (.notStarted, _):
             handleError(.stateTransitionInvalid(newState))
         }
     }

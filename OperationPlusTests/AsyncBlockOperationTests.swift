@@ -34,7 +34,7 @@ class AsyncBlockOperationTests: XCTestCase {
         let expectation = OperationExpectation(operation: op)
         expectation.isInverted = true
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 0.1)
 
         XCTAssertTrue(op.isReady)
         XCTAssertFalse(op.isFinished)
