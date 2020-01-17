@@ -14,6 +14,7 @@
 		C949420F232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */; };
 		C9494211232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */; };
 		C9494213232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */; };
+		C990C94423CF79D600203A47 /* NeverFinishingProducerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C990C94323CF79D600203A47 /* NeverFinishingProducerOperation.swift */; };
 		C9B0213B2203CE91006A1D9F /* OperationPlus.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9B021312203CE91006A1D9F /* OperationPlus.framework */; };
 		C9B021422203CE91006A1D9F /* OperationPlus.h in Headers */ = {isa = PBXBuildFile; fileRef = C9B021342203CE91006A1D9F /* OperationPlus.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B0214B2203CFD1006A1D9F /* BaseOperation.swift */; };
@@ -72,6 +73,7 @@
 		C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockProducerOperation.swift; sourceTree = "<group>"; };
 		C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
 		C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
+		C990C94323CF79D600203A47 /* NeverFinishingProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverFinishingProducerOperation.swift; sourceTree = "<group>"; };
 		C9B021312203CE91006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B021342203CE91006A1D9F /* OperationPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationPlus.h; sourceTree = "<group>"; };
 		C9B021352203CE91006A1D9F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				C9B021872203D3A2006A1D9F /* NeverFinishingOperation.swift */,
 				C9B021852203D3A1006A1D9F /* OperationExpectation.swift */,
 				C9B021842203D310006A1D9F /* OperationTestingPlus.xcconfig */,
+				C990C94323CF79D600203A47 /* NeverFinishingProducerOperation.swift */,
 			);
 			path = OperationTestingPlus;
 			sourceTree = "<group>";
@@ -407,6 +410,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C990C94423CF79D600203A47 /* NeverFinishingProducerOperation.swift in Sources */,
 				C9B021882203D3A2006A1D9F /* OperationExpectation.swift in Sources */,
 				C9B0218A2203D3A2006A1D9F /* NeverFinishingOperation.swift in Sources */,
 				C9B021892203D3A2006A1D9F /* FulfillExpectationOperation.swift in Sources */,
@@ -565,7 +569,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -577,7 +580,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -592,7 +594,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -604,7 +605,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};
@@ -650,7 +650,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -662,7 +661,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -677,7 +675,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -689,7 +686,6 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.3.0;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 			};

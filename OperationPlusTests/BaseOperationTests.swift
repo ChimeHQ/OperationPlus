@@ -47,7 +47,7 @@ class BaseOperationTests: XCTestCase {
     }
 
     func testTimeOut() {
-        let op = NeverFinishingOperation(timeout: 1.0)
+        let op = NeverFinishingOperation(timeout: 0.1)
 
         let expectation = OperationExpectation(operation: op)
 
@@ -55,7 +55,7 @@ class BaseOperationTests: XCTestCase {
 
         XCTAssertTrue(op.isTimedOut)
         XCTAssertTrue(op.isFinished)
-        XCTAssertFalse(op.isCancelled)
+        XCTAssertTrue(op.isCancelled)
     }
 
     func testNeverFinishingOperation() {
@@ -64,7 +64,7 @@ class BaseOperationTests: XCTestCase {
         let expectation = OperationExpectation(operation: op)
         expectation.isInverted = true
 
-        wait(for: [expectation], timeout: 1.0)
+        wait(for: [expectation], timeout: 0.1)
 
         XCTAssertTrue(op.isReady)
         XCTAssertFalse(op.isFinished)
@@ -129,7 +129,7 @@ extension BaseOperationTests {
 
         op.timedOut()
 
-        XCTAssertEqual(op.handledError, BaseOperationError.stateTransitionInvalid(.timedOut))
+        XCTAssertEqual(op.handledError, BaseOperationError.stateTransitionInvalid(.finished))
     }
 
     func testDoubleFinishIsInvalid() {
@@ -146,17 +146,57 @@ extension BaseOperationTests {
     }
 
     func testFinishAfterTimeoutIsValid() {
-        let op = MockOperation(timeout: 1.0, executeBlock: { (o) in
-            sleep(2)
+        let secondCompletionExpectation = expectation(description: "second completion")
+
+        let op = MockOperation(timeout: 0.1, executeBlock: { (o) in
+            usleep(UInt32(o.timeoutInterval * 2000.0))
+            o.finish()
+            secondCompletionExpectation.fulfill()
+        })
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: op.timeoutInterval * 2.0)
+
+        XCTAssertNil(op.handledError)
+        XCTAssertTrue(op.isTimedOut)
+        XCTAssertTrue(op.isFinished)
+
+        wait(for: [secondCompletionExpectation], timeout: op.timeoutInterval * 2.0)
+
+        XCTAssertNil(op.handledError)
+        XCTAssertTrue(op.isTimedOut)
+        XCTAssertTrue(op.isFinished)
+    }
+
+    func testCancelBeforeStarting() {
+        let op = MockOperation(executeBlock: { (o) in
+            o.finish()
+        })
+
+        op.cancel()
+
+        let expectation = OperationExpectation(operation: op)
+
+        wait(for: [expectation], timeout: 0.1)
+
+        XCTAssertNil(op.handledError)
+        XCTAssertTrue(op.isCancelled)
+        XCTAssertTrue(op.isFinished)
+    }
+
+    func testFinishAfterCancellationDuringExecutionIsValid() {
+        let op = MockOperation(executeBlock: { (o) in
+            o.cancel()
             o.finish()
         })
 
         let expectation = OperationExpectation(operation: op)
 
-        wait(for: [expectation], timeout: 3.0)
+        wait(for: [expectation], timeout: 0.1)
 
         XCTAssertNil(op.handledError)
-        XCTAssertTrue(op.isTimedOut)
+        XCTAssertTrue(op.isCancelled)
         XCTAssertTrue(op.isFinished)
     }
 }

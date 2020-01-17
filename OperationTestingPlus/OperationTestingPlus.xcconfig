@@ -17,7 +17,8 @@ SUPPORTED_PLATFORMS = macosx iphonesimulator iphoneos appletvos appletvsimulator
 PRODUCT_NAME = OperationTestingPlus
 PRODUCT_BUNDLE_IDENTIFIER = com.chimehq.OperationTestingPlus
 PRODUCT_MODULE_NAME = OperationTestingPlus
-CURRENT_PROJECT_VERSION = 5
+CURRENT_PROJECT_VERSION = 8
+MARKETING_VERSION = 1.5.0
 
 INFOPLIST_FILE = OperationTestingPlus/Info.plist
 

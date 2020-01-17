@@ -94,11 +94,11 @@ class OperationQueueTests: XCTestCase {
         let dependentOp = Operation()
         dependentOp.addDependency(op)
 
-        queue.addOperation(op, afterDelay: 1.0)
+        queue.addOperation(op, afterDelay: 0.1)
 
         let expectation = OperationExpectation(operation: dependentOp, queue: queue)
 
-        wait(for: [expectation], timeout: 2.0)
+        wait(for: [expectation], timeout: 0.2)
     }
 
     func testAddDependencies() {
