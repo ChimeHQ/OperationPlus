@@ -11,6 +11,19 @@ import OperationTestingPlus
 @testable import OperationPlus
 
 class OperationQueueTests: XCTestCase {
+    func testSerialCreation() {
+        let queue = OperationQueue.serialQueue()
+
+        XCTAssertEqual(queue.maxConcurrentOperationCount, 1)
+    }
+
+    func testNamedSerialCreation() {
+        let queue = OperationQueue.serialQueue(named: "myqueue")
+
+        XCTAssertEqual(queue.name, "myqueue")
+        XCTAssertEqual(queue.maxConcurrentOperationCount, 1)
+    }
+
     func testDependencies() {
         let opA = Operation()
         let opB = Operation()

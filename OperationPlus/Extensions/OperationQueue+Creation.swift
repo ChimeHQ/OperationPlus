@@ -27,6 +27,6 @@ extension OperationQueue {
     }
 
     public static func serialQueue(named name: String) -> OperationQueue {
-        return OperationQueue(name: name)
+        return OperationQueue(name: name, maxConcurrentOperations: 1)
     }
 }
