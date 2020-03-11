@@ -263,7 +263,7 @@ A great way to test out your Operations' timeout behaviors.
 
 **OperationExpectation**
 
-An `XCTestExpectation` sublass to make testing async operations a little more XCTTest-like.
+An `XCTestExpectation` sublass to make testing async operations a little more XCTest-like.
 
 ```swift
 let op = NeverFinishingOperation()
