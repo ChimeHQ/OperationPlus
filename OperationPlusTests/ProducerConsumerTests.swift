@@ -169,4 +169,45 @@ class ProducerConsumerTests: XCTestCase {
         XCTAssertTrue(op.isCancelled)
         XCTAssertEqual(op.value, 10)
     }
+
+    func testAsyncBlockConsumerOperation() {
+        let opA = IntProducerOperation(intValue: 10)
+
+        let valueExpectation = expectation(description: "Got Value")
+
+        let blockOp = AsyncBlockConsumerOperation<Int>(producerOp: opA) { (value, opCompletionBlock) in
+            DispatchQueue.global().async {
+                if value == 10 {
+                    valueExpectation.fulfill()
+                }
+                opCompletionBlock()
+            }
+        }
+
+        let opExpectation = OperationExpectation(operations: [opA, blockOp])
+
+        wait(for: [valueExpectation, opExpectation], timeout: 1.0)
+
+        XCTAssertTrue(opA.isFinished)
+        XCTAssertTrue(blockOp.isFinished)
+    }
+
+    func testBlockConsumerOperation() {
+        let opA = IntProducerOperation(intValue: 10)
+
+        let valueExpectation = expectation(description: "Got Value")
+
+        let blockOp = BlockConsumerOperation<Int>(producerOp: opA) { (value) in
+            if value == 10 {
+                valueExpectation.fulfill()
+            }
+        }
+
+        let opExpectation = OperationExpectation(operations: [opA, blockOp])
+
+        wait(for: [valueExpectation, opExpectation], timeout: 1.0)
+
+        XCTAssertTrue(opA.isFinished)
+        XCTAssertTrue(blockOp.isFinished)
+    }
 }

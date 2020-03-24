@@ -8,7 +8,7 @@
 
 import Foundation
 
-/// An block-based version of ConsumerProducerOperation
+/// A block-based version of ConsumerProducerOperation
 public class BlockConsumerProducerOperation<Input, Output>: ConsumerProducerOperation<Input, Output> {
     public typealias Block = (Input) -> Output?
 

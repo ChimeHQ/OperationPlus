@@ -33,6 +33,8 @@
 		C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021962203D6AA006A1D9F /* OperationQueue+Dependencies.swift */; };
 		C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021972203D6AA006A1D9F /* Operation+Dependencies.swift */; };
 		C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */; };
+		C9C30EA72428DC01003BE31A /* BlockConsumerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C30EA62428DC01003BE31A /* BlockConsumerOperation.swift */; };
+		C9C30EA92428DC1D003BE31A /* AsyncBlockConsumerOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9C30EA82428DC1D003BE31A /* AsyncBlockConsumerOperation.swift */; };
 		C9CC1D442206735800F7DCAE /* OperationQueue+Enqueuing.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */; };
 		C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */; };
 		C9CC1D482207CA5600F7DCAE /* AsyncBlockOperationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */; };
@@ -101,6 +103,8 @@
 		C9B021982203D6AA006A1D9F /* OperationQueue+Creation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Creation.swift"; sourceTree = "<group>"; };
 		C9B021B92203DE8E006A1D9F /* OperationPlusTests.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = OperationPlusTests.xcconfig; sourceTree = "<group>"; };
 		C9B022A62205287F006A1D9F /* xcconfigs */ = {isa = PBXFileReference; lastKnownFileType = folder; path = xcconfigs; sourceTree = SOURCE_ROOT; };
+		C9C30EA62428DC01003BE31A /* BlockConsumerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockConsumerOperation.swift; sourceTree = "<group>"; };
+		C9C30EA82428DC1D003BE31A /* AsyncBlockConsumerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockConsumerOperation.swift; sourceTree = "<group>"; };
 		C9CC1D432206735800F7DCAE /* OperationQueue+Enqueuing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OperationQueue+Enqueuing.swift"; sourceTree = "<group>"; };
 		C9CC1D4522075FE900F7DCAE /* BaseOperationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseOperationError.swift; sourceTree = "<group>"; };
 		C9CC1D472207CA5600F7DCAE /* AsyncBlockOperationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockOperationTests.swift; sourceTree = "<group>"; };
@@ -175,6 +179,8 @@
 				C949420A232C043D00BCFC88 /* AsyncConsumerProducerOperation.swift */,
 				C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */,
 				C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */,
+				C9C30EA62428DC01003BE31A /* BlockConsumerOperation.swift */,
+				C9C30EA82428DC1D003BE31A /* AsyncBlockConsumerOperation.swift */,
 				C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */,
 				C9B021932203D677006A1D9F /* Extensions */,
 			);
@@ -371,6 +377,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9C30EA92428DC1D003BE31A /* AsyncBlockConsumerOperation.swift in Sources */,
 				C9B021A12203D6AA006A1D9F /* OperationQueue+Creation.swift in Sources */,
 				C9CC1D4622075FE900F7DCAE /* BaseOperationError.swift in Sources */,
 				C9B021992203D6AA006A1D9F /* OperationQueue+Emptied.swift in Sources */,
@@ -384,6 +391,7 @@
 				C9B0219D2203D6AA006A1D9F /* OperationQueue+Dependencies.swift in Sources */,
 				C9B021502203D064006A1D9F /* ProducerOperation.swift in Sources */,
 				C9B0214C2203CFD1006A1D9F /* BaseOperation.swift in Sources */,
+				C9C30EA72428DC01003BE31A /* BlockConsumerOperation.swift in Sources */,
 				C9B021522203D086006A1D9F /* AsyncProducerOperation.swift in Sources */,
 				C9494211232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift in Sources */,
 				C9B0219F2203D6AA006A1D9F /* Operation+Dependencies.swift in Sources */,
