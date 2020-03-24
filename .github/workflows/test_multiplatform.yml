@@ -15,4 +15,4 @@ jobs:
     - name: Use platform ${{ matrix.destination }}
       run: |
         git submodule update --init
-        xcodebuild test -scheme OperationPlus -destination "${{ matrix.destination }}"
+        set -o pipefail && xcodebuild test -scheme OperationPlus -destination "${{ matrix.destination }}" | xcpretty

@@ -111,7 +111,7 @@ class OperationQueueTests: XCTestCase {
 
         let expectation = OperationExpectation(operation: dependentOp, queue: queue)
 
-        wait(for: [expectation], timeout: 0.2)
+        wait(for: [expectation], timeout: 0.5)
     }
 
     func testAddDependencies() {
