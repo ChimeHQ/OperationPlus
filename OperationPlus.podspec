@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'OperationPlus'
-  s.version      = '1.3.0'
+  s.version      = '1.5.2'
   s.summary      = 'NSOperation\'s missing pieces'
 
   s.homepage     = 'https://github.com/ChimeHQ/OperationPlus'
