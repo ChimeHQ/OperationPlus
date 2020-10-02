@@ -17,16 +17,9 @@ SUPPORTED_PLATFORMS = macosx iphonesimulator iphoneos appletvos appletvsimulator
 PRODUCT_NAME = OperationTestingPlus
 PRODUCT_BUNDLE_IDENTIFIER = com.chimehq.OperationTestingPlus
 PRODUCT_MODULE_NAME = OperationTestingPlus
-CURRENT_PROJECT_VERSION = 8
-MARKETING_VERSION = 1.5.0
 
 INFOPLIST_FILE = OperationTestingPlus/Info.plist
 
 FRAMEWORK_SEARCH_PATHS = $(PLATFORM_DIR)/Developer/Library/Frameworks
 
 MACH_O_TYPE = staticlib
-
-MACOSX_DEPLOYMENT_TARGET = 10.10
-IPHONEOS_DEPLOYMENT_TARGET = 8.0
-TVOS_DEPLOYMENT_TARGET = 10.0
-WATCHOS_DEPLOYMENT_TARGET = 3.0

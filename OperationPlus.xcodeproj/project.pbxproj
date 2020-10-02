@@ -75,6 +75,7 @@
 		C949420E232C7C8700BCFC88 /* AsyncBlockProducerOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncBlockProducerOperation.swift; sourceTree = "<group>"; };
 		C9494210232DB95000BCFC88 /* AsyncBlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncBlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
 		C9494212232DBEE900BCFC88 /* BlockConsumerProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockConsumerProducerOperation.swift; sourceTree = "<group>"; };
+		C94F97F62526A97A00CE1DA1 /* Project.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
 		C990C94323CF79D600203A47 /* NeverFinishingProducerOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverFinishingProducerOperation.swift; sourceTree = "<group>"; };
 		C9B021312203CE91006A1D9F /* OperationPlus.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OperationPlus.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9B021342203CE91006A1D9F /* OperationPlus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OperationPlus.h; sourceTree = "<group>"; };
@@ -183,6 +184,7 @@
 				C9C30EA82428DC1D003BE31A /* AsyncBlockConsumerOperation.swift */,
 				C9B021762203D1C2006A1D9F /* OperationPlus.xcconfig */,
 				C9B021932203D677006A1D9F /* Extensions */,
+				C94F97F62526A97A00CE1DA1 /* Project.xcconfig */,
 			);
 			path = OperationPlus;
 			sourceTree = "<group>";
@@ -448,6 +450,7 @@
 /* Begin XCBuildConfiguration section */
 		C9B021432203CE91006A1D9F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94F97F62526A97A00CE1DA1 /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -480,7 +483,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -498,8 +500,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -513,6 +513,7 @@
 		};
 		C9B021442203CE91006A1D9F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C94F97F62526A97A00CE1DA1 /* Project.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -545,7 +546,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -557,8 +557,6 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
