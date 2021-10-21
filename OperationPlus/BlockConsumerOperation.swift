@@ -12,10 +12,10 @@ import Foundation
 public class BlockConsumerOperation<Input>: ConsumerOperation<Input> {
     private let block: (Input) -> Void
 
-    public init(producerOp: ProducerOperation<Input>, block: @escaping (Input) -> Void) {
+    public init(producerOp: ProducerOperation<Input>, timeout: TimeInterval = .greatestFiniteMagnitude, block: @escaping (Input) -> Void) {
         self.block = block
 
-        super.init(producerOp: producerOp)
+        super.init(producerOp: producerOp, timeout: timeout)
     }
 
     override open func main(with producedValue: Input) {

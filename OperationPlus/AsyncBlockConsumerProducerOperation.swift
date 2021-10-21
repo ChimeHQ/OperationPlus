@@ -14,10 +14,10 @@ public class AsyncBlockConsumerProducerOperation<Input, Output>: AsyncConsumerPr
 
     private let block: CompletionHandler
 
-    public init(producerOp: ProducerOperation<Input>, block: @escaping CompletionHandler) {
+    public init(producerOp: ProducerOperation<Input>, timeout: TimeInterval = .greatestFiniteMagnitude, block: @escaping CompletionHandler) {
         self.block = block
 
-        super.init(producerOp: producerOp)
+        super.init(producerOp: producerOp, timeout: timeout)
     }
 
     override open func main(with producedValue: Input) {

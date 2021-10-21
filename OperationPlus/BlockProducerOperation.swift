@@ -12,8 +12,10 @@ import Foundation
 public class BlockProducerOperation<Output>: ProducerOperation<Output> {
     private let block: () -> Output?
 
-    public init(block: @escaping () -> Output?) {
+    public init(timeout: TimeInterval = .greatestFiniteMagnitude, block: @escaping () -> Output?) {
         self.block = block
+
+        super.init(timeout: timeout)
     }
 
     override open func main() {

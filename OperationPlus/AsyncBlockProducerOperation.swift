@@ -14,10 +14,10 @@ public class AsyncBlockProducerOperation<Output>: AsyncProducerOperation<Output>
 
     private let block: CompletionHandler
 
-    public init(block: @escaping CompletionHandler) {
+    public init(timeout: TimeInterval = .greatestFiniteMagnitude, block: @escaping CompletionHandler) {
         self.block = block
 
-        super.init()
+        super.init(timeout: timeout)
     }
 
     override open func main() {

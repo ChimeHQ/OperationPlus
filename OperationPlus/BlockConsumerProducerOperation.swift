@@ -14,10 +14,10 @@ public class BlockConsumerProducerOperation<Input, Output>: ConsumerProducerOper
 
     private let block: Block
 
-    public init(producerOp: ProducerOperation<Input>, block: @escaping Block) {
+    public init(producerOp: ProducerOperation<Input>, timeout: TimeInterval = .greatestFiniteMagnitude, block: @escaping Block) {
         self.block = block
 
-        super.init(producerOp: producerOp)
+        super.init(producerOp: producerOp, timeout: timeout)
     }
 
     override open func main(with producedValue: Input) {
