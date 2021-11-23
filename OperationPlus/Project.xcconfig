@@ -9,8 +9,8 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-CURRENT_PROJECT_VERSION = 11
-MARKETING_VERSION = 1.5.3
+CURRENT_PROJECT_VERSION = 12
+MARKETING_VERSION = 1.5.4
 
 MACOSX_DEPLOYMENT_TARGET = 10.10
 IPHONEOS_DEPLOYMENT_TARGET = 8.0
