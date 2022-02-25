@@ -11,9 +11,9 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .target(name: "OperationPlus", dependencies: [], path: "OperationPlus/"),
-        .target(name: "OperationTestingPlus", dependencies: ["OperationPlus"], path: "OperationTestingPlus/"),
-        .testTarget(name: "OperationPlusTests", dependencies: ["OperationPlus", "OperationTestingPlus"], path: "OperationPlusTests/"),
+        .target(name: "OperationPlus", dependencies: []),
+        .target(name: "OperationTestingPlus", dependencies: ["OperationPlus"]),
+        .testTarget(name: "OperationPlusTests", dependencies: ["OperationPlus", "OperationTestingPlus"]),
     ],
     swiftLanguageVersions: [.v5]
 )

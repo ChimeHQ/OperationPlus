@@ -33,10 +33,6 @@ open class BaseOperation : Operation {
         fatalError(error.localizedDescription)
     }
 
-    override open var isConcurrent: Bool {
-        return isAsynchronous
-    }
-
     override open var isExecuting: Bool {
         lock.lock()
         defer { lock.unlock() }

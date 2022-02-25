@@ -33,3 +33,15 @@ class IntToBoolOperation: ConsumerProducerOperation<Int, Bool> {
 
 typealias BoolConsumerOperation = ConsumerOperation<Bool>
 typealias IntConsumerOperation = ConsumerOperation<Int>
+
+class IntResultProducerOperation: ProducerOperation<Result<Int, Error>> {
+    let resultValue: Result<Int, Error>
+
+    init(_ value: Result<Int, Error>) {
+        self.resultValue = value
+    }
+
+    override func main() {
+        self.finish(with: resultValue)
+    }
+}
