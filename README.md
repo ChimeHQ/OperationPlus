@@ -272,4 +272,4 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 [license]: https://opensource.org/licenses/BSD-3-Clause
 [license badge]: https://img.shields.io/github/license/ChimeHQ/OperationPlus
 [platforms]: https://swiftpackageindex.com/ChimeHQ/OperationPlus
-[platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FOperationPlus%2FRearrange%2Fbadge%3Ftype%3Dplatforms
+[platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FChimeHQ%2FOperationPlus%2Fbadge%3Ftype%3Dplatforms
