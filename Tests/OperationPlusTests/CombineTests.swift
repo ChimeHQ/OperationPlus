@@ -16,6 +16,25 @@ import Combine
 class CombineTests: XCTestCase {
     var subs = Set<AnyCancellable>()
 
+    func testOperationPublisher() {
+        let op = Operation()
+
+        let valueExpectation = expectation(description: "Got Value")
+        valueExpectation.assertForOverFulfill = true
+
+        op.publisher()
+            .sink {
+                valueExpectation.fulfill()
+            }
+            .store(in: &subs)
+
+        let opExpectation = OperationExpectation(operations: [op])
+
+        wait(for: [valueExpectation, opExpectation], timeout: 1.0)
+
+        XCTAssertTrue(op.isFinished)
+    }
+
     func testProducerPublisher() {
         let op = IntProducerOperation(intValue: 42)
 
@@ -23,7 +42,7 @@ class CombineTests: XCTestCase {
         valueExpectation.assertForOverFulfill = true
 
         op.publisher()
-            .sink { value in
+            .sink {
                 valueExpectation.fulfill()
             }
             .store(in: &subs)
@@ -42,7 +61,7 @@ class CombineTests: XCTestCase {
         let valueExpectation = expectation(description: "Got Value")
         valueExpectation.assertForOverFulfill = true
 
-        op.publisher()
+        op.outputPublisher()
             .flatMap { result in
                 return result.publisher
             }
