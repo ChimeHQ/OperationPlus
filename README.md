@@ -6,7 +6,7 @@
 
 OperationPlus is a set of `NSOperation` subclasses and extensions on `NSOperation`/`NSOperationQueue`. Its goal is to fill in the API's missing pieces. You don't need to learn anything new to use it.
 
-There are a bunch of alternatives to the NSOperation model, most notably Combine. But, Combine is very new, and only usable on the most recent OS releases. Apple has been shipping NSOperation for years, and it gets used a lot. Once you start building real applications against it, you might find that the API is missing some important parts. OperationPlus tries to help make things more convenient and composable.
+NSOperation has been around for a long time, and there are now two potential first-party alternatives, Combine and Swift concurrency. OperationPlus includes some facilities to help Combine and NSOperation interoperate conveniently.
 
 ## Integration
 
@@ -234,6 +234,23 @@ queue.addOperation(op, afterDelay: 5.0)
 queue.addOperation(afterDelay: 5.0) {
   // work
 }
+```
+
+### Combine Integration
+
+**PublisherOperation**
+
+This `ProducerOperation` subclass takes a publisher. When executed, it creates a subscription and outputs the results.
+
+```swift
+op.publisher() // AnyPublisher<Void, Never>
+
+producerOp.outputPublisher() // AnyPublisher<Output, Never>
+```
+
+```swift
+publisher.operation() // PublisherOperation
+publisher.execute(on: queue) // subscribes and executes chain on queue and returns a publisher for result
 ```
 
 ### XCTest Support

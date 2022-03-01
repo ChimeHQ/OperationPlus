@@ -13,7 +13,7 @@ import OperationPlus
 /// timeout behavior of other systems.
 ///
 /// Warning: This operation will completely block a serial queue forever
-public class NeverFinishingProducerOperation<T>: ProducerOperation<T> {
+public class NeverFinishingProducerOperation<Output>: ProducerOperation<Output> {
     public override func main() {
     }
 }

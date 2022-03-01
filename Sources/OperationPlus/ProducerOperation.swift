@@ -8,23 +8,17 @@
 
 import Foundation
 
-/// An alias to ProducerOperation
-///
-/// This is including for backwards compatibility. `ProducerOperation`
-/// should be used for new code.
-public typealias ResultOperation<T> = ProducerOperation<T>
-
-open class ProducerOperation<T> : BaseOperation {
-    public enum ResultCompletionBlockBehavior {
+open class ProducerOperation<Output> : BaseOperation {
+    public enum OutputCompletionBlockBehavior {
         case onCompletionOnly
-        case onTimeOut(T)
+        case onTimeOut(Output)
     }
 
-    public typealias ResultBlock = (T) -> Void
+    public typealias OutputHandler = (Output) -> Void
 
-    public var resultCompletionBlock: ResultBlock?
-    public var value: T?
-    public var resultCompletionBlockBehavior = ResultCompletionBlockBehavior.onCompletionOnly
+    public var outputCompletionBlock: OutputHandler?
+    public var value: Output?
+    public var outputCompletionBlockBehavior = OutputCompletionBlockBehavior.onCompletionOnly
 
     /// Block to return a cached value
     ///
@@ -32,22 +26,22 @@ open class ProducerOperation<T> : BaseOperation {
     /// returns a non-nil value, that value is used instead
     /// of executing the main body. This is useful for caching
     /// the result in external storage.
-    public var readCacheBlock: (() -> T?)?
+    public var readCacheBlock: (() -> Output?)?
 
     /// Block to write back a cached value
     ///
     /// This block is run after the operation has successfully
     /// produced a value. It can be used to write the value
     /// out to external storage.
-    public var writeCacheBlock: ((T) -> Void)?
+    public var writeCacheBlock: ((Output) -> Void)?
 
-    public func finish(with v: T) {
+    public func finish(with v: Output) {
         self.value = v
         writeCacheBlock?(v)
 
-        switch (resultCompletionBlockBehavior, isCancelled, isTimedOut) {
+        switch (outputCompletionBlockBehavior, isCancelled, isTimedOut) {
         case (_, false, false):
-            resultCompletionBlock?(v)
+            outputCompletionBlock?(v)
         case (_, _, true):
             return // do not call finish in this case
         default:
@@ -75,12 +69,14 @@ open class ProducerOperation<T> : BaseOperation {
     override open func timedOut() {
         super.timedOut()
 
-        switch (resultCompletionBlockBehavior, isCancelled, isTimedOut) {
+        switch (outputCompletionBlockBehavior, isCancelled, isTimedOut) {
         case (.onTimeOut(let v), _, true):
             self.value = v
-            resultCompletionBlock?(v)
+            outputCompletionBlock?(v)
         default:
             break
         }
     }
 }
+
+public typealias ResultOperation<Success, Failure: Error> = ProducerOperation<Result<Success, Failure>>

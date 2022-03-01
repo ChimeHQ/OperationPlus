@@ -158,7 +158,7 @@ class ProducerConsumerTests: XCTestCase {
 
     func testProducerTimeOutValue() {
         let op = NeverFinishingProducerOperation<Int>(timeout: 0.1)
-        op.resultCompletionBlockBehavior = .onTimeOut(10)
+        op.outputCompletionBlockBehavior = .onTimeOut(10)
 
         let expectation = OperationExpectation(operation: op)
 

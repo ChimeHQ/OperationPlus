@@ -30,3 +30,5 @@ public class AsyncBlockProducerOperation<Output>: AsyncProducerOperation<Output>
         })
     }
 }
+
+public typealias AsyncBlockResultOperation<Success, Failure: Error> = AsyncBlockProducerOperation<Result<Success, Failure>>

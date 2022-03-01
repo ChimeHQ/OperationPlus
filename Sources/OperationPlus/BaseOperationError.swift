@@ -18,6 +18,7 @@ import Foundation
 public enum BaseOperationError: Error {
     case dependencyAddedInInvalidState(Operation)
     case stateTransitionInvalid(BaseOperation.State)
+    case timedOut
 }
 
 extension BaseOperationError: Equatable {

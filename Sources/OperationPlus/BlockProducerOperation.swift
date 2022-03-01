@@ -26,3 +26,5 @@ public class BlockProducerOperation<Output>: ProducerOperation<Output> {
         }
     }
 }
+
+public typealias BlockResultOperation<Success, Failure: Error> = BlockProducerOperation<Result<Success, Failure>>

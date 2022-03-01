@@ -8,14 +8,10 @@
 
 import Foundation
 
-/// An alias to AsyncProducerOperation
-///
-/// This is including for backwards compatibility. `AsyncProducerOperation`
-/// should be used for new code.
-public typealias AsyncResultOperation<T> = AsyncProducerOperation<T>
-
-open class AsyncProducerOperation<T> : ProducerOperation<T> {
+open class AsyncProducerOperation<Output> : ProducerOperation<Output> {
     override open var isAsynchronous: Bool {
         return true
     }
 }
+
+public typealias AsyncResultOperation<Success, Failure: Error> = AsyncProducerOperation<Result<Success, Failure>>
