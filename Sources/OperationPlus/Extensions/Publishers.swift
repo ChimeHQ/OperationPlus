@@ -42,7 +42,7 @@ public class PublisherOperation<Output, Failure: Error>: AsyncProducerOperation<
     }
 
     public override func main() {
-        self.cancellable = chain.sink { [weak self] completion in
+        self.cancellable = chain.sink(receiveCompletion: { [weak self] completion in
             switch completion {
             case .failure(let error):
                 self?.finish(with: .failure(error))
@@ -51,9 +51,9 @@ public class PublisherOperation<Output, Failure: Error>: AsyncProducerOperation<
                     self?.finish()
                 }
             }
-        } receiveValue: { [weak self] output in
+        }, receiveValue: { [weak self] output in
             self?.finish(with: .success(output))
-        }
+        })
     }
 
     override public func cancel() {
