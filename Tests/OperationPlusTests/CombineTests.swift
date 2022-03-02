@@ -12,7 +12,7 @@ import OperationTestingPlus
 #if canImport(Combine)
 import Combine
 
-@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 6.0, *)
+@available(iOS 15.0, macOS 12.0, tvOS 15.0, watchOS 7.0, *)
 class CombineTests: XCTestCase {
     var subs = Set<AnyCancellable>()
 
