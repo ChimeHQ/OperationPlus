@@ -113,9 +113,6 @@ class CombineTests: XCTestCase {
 
         let startExp = expectation(description: "Starting")
         let completingExp = expectation(description: "Starting")
-        let valueExp = expectation(description: "Got Value")
-
-        valueExp.expectedFulfillmentCount = 2
 
         let pub = Deferred {
             Future<Int, Never> { block in
@@ -132,17 +129,19 @@ class CombineTests: XCTestCase {
         .execute(on: queue)
 
         // create two subsribers
+        let firstSubExp = expectation(description: "First Value")
         pub
             .receive(on: DispatchQueue.global())
             .sink { _ in
-                valueExp.fulfill()
+                firstSubExp.fulfill()
             }
             .store(in: &subs)
 
+        let secondSubExp = expectation(description: "Second Value")
         pub
             .receive(on: DispatchQueue.global())
             .sink { _ in
-                valueExp.fulfill()
+                secondSubExp.fulfill()
             }
             .store(in: &subs)
 
@@ -157,7 +156,7 @@ class CombineTests: XCTestCase {
         queue.addOperation(op)
 
         wait(for: [startExp, completingExp, nextOpExp], timeout: 1.0, enforceOrder: true)
-        wait(for: [valueExp], timeout: 1.0)
+        wait(for: [firstSubExp, secondSubExp], timeout: 1.0)
     }
 }
 
