@@ -111,7 +111,7 @@ open class BaseOperation : Operation {
 
 extension BaseOperation {
     private var deadlineTime: DispatchTime {
-        return DispatchTime.now() + .seconds(Int(timeoutInterval))
+        return DispatchTime.now() + .milliseconds(Int(timeoutInterval * 1000.0))
     }
 
     private func setupTimeout() {
@@ -124,11 +124,7 @@ extension BaseOperation {
         }
 
         DispatchQueue.global().asyncAfter(deadline: deadlineTime) { [weak self] in
-            guard let op = self else {
-                return
-            }
-
-            op.markTimedOut()
+            self?.markTimedOut()
         }
     }
 }

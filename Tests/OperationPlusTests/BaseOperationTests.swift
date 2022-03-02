@@ -149,20 +149,20 @@ extension BaseOperationTests {
         let secondCompletionExpectation = expectation(description: "second completion")
 
         let op = MockOperation(timeout: 0.1, executeBlock: { (o) in
-            usleep(UInt32(o.timeoutInterval * 2000.0))
+            usleep(UInt32(o.timeoutInterval * 1000.0 * 1000.0 * 2.0))
             o.finish()
             secondCompletionExpectation.fulfill()
         })
 
         let expectation = OperationExpectation(operation: op)
 
-        wait(for: [expectation], timeout: op.timeoutInterval * 2.0)
+        wait(for: [expectation], timeout: 1.0)
 
         XCTAssertNil(op.handledError)
         XCTAssertTrue(op.isTimedOut)
         XCTAssertTrue(op.isFinished)
 
-        wait(for: [secondCompletionExpectation], timeout: op.timeoutInterval * 2.0)
+        wait(for: [secondCompletionExpectation], timeout: 1.0)
 
         XCTAssertNil(op.handledError)
         XCTAssertTrue(op.isTimedOut)
