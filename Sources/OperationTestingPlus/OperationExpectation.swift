@@ -9,7 +9,6 @@
 import Foundation
 import class XCTest.XCTestExpectation
 
-
 /// An expectation that is fulfilled when an operation
 /// has finished execution.
 public class OperationExpectation: XCTestExpectation {
