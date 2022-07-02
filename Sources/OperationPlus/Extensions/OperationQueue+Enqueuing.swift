@@ -58,3 +58,45 @@ extension OperationQueue {
         addOperation(BlockOperation(block: block), afterDelay: delay)
     }
 }
+
+@available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
+extension OperationQueue {
+    /// Adds the specified async operation to the queue.
+    ///
+    /// It's worth careful considering the priority used for operations excuted this
+    /// way. `OperationQueue` and `Task` may not cooperate nicely, and prioity inversion
+    /// could be possible.
+    ///
+    /// - Parameter block: The async operation to be added to the queue.
+    public func addOperation(block: @Sendable @escaping () async -> Void) {
+        let op = AsyncBlockOperation { opBlock in
+            Task.detached {
+                await block()
+
+                opBlock()
+            }
+        }
+
+        addOperation(op)
+    }
+
+    /// Adds the specified async operation to the queue and returns its result.
+    ///
+    /// This function behaves just like the async version of addOperation, but can
+    /// return a result value.
+    ///
+    /// - Parameter block: The async operation to be added to the queue.
+    public func addResultOperation<Success>(block: @Sendable @escaping () async throws -> Success) async throws -> Success {
+        return try await withCheckedThrowingContinuation({ continuation in
+            addOperation {
+                do {
+                    let value = try await block()
+
+                    continuation.resume(returning: value)
+                } catch {
+                    continuation.resume(throwing: error)
+                }
+            }
+        })
+    }
+}

@@ -225,6 +225,17 @@ queue.addAsyncOperation { (completionHandler) in
         completionHandler()
     }
 }
+
+Async integration:
+
+queue.addOperation {
+    await asyncFunction1()
+    await asyncFunction2()
+}
+
+let value = try await queue.addResultOperation {
+    try await asyncValue()
+}
 ```
 
 Delays:

@@ -145,4 +145,28 @@ class OperationQueueTests: XCTestCase {
         XCTAssertTrue(opC.dependencies.contains(opA))
         XCTAssertTrue(opC.dependencies.contains(opB))
     }
+
+    func testAddOperationAsync() {
+        let queue = OperationQueue()
+
+        let expectation = XCTestExpectation()
+
+        queue.addOperation {
+            await Task { }.value
+
+            expectation.fulfill()
+        }
+
+        wait(for: [expectation], timeout: 0.5)
+    }
+
+    func testAddResultOperationAsync() async throws {
+        let queue = OperationQueue()
+
+        let value = try await queue.addResultOperation {
+            return 5
+        }
+
+        XCTAssertEqual(value, 5)
+    }
 }
