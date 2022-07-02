@@ -146,6 +146,7 @@ class OperationQueueTests: XCTestCase {
         XCTAssertTrue(opC.dependencies.contains(opB))
     }
 
+    @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
     func testAddOperationAsync() {
         let queue = OperationQueue()
 
@@ -160,6 +161,7 @@ class OperationQueueTests: XCTestCase {
         wait(for: [expectation], timeout: 0.5)
     }
 
+    @available(macOS 10.15, iOS 13.0, watchOS 6.0, tvOS 13.0, *)
     func testAddResultOperationAsync() async throws {
         let queue = OperationQueue()
 
