@@ -225,9 +225,11 @@ queue.addAsyncOperation { (completionHandler) in
         completionHandler()
     }
 }
+```
 
 Async integration:
 
+```swift
 queue.addOperation {
     await asyncFunction1()
     await asyncFunction2()
