@@ -1,6 +1,9 @@
+<div align="center">
+
 [![Build Status][build status badge]][build status]
-[![License][license badge]][license]
 [![Platforms][platforms badge]][platforms]
+
+</div>
 
 # OperationPlus
 
@@ -299,7 +302,5 @@ Please note that this project is released with a [Contributor Code of Conduct](C
 
 [build status]: https://github.com/ChimeHQ/OperationPlus/actions
 [build status badge]: https://github.com/ChimeHQ/OperationPlus/workflows/CI/badge.svg
-[license]: https://opensource.org/licenses/BSD-3-Clause
-[license badge]: https://img.shields.io/github/license/ChimeHQ/OperationPlus
 [platforms]: https://swiftpackageindex.com/ChimeHQ/OperationPlus
 [platforms badge]: https://img.shields.io/endpoint?url=https%3A%2F%2Fswiftpackageindex.com%2Fapi%2Fpackages%2FChimeHQ%2FOperationPlus%2Fbadge%3Ftype%3Dplatforms
